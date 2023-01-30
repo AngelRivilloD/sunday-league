@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LineupComponent } from 'src/lineup/lineup.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    DragDropModule
+    DragDropModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

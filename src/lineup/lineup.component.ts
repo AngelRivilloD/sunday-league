@@ -35,7 +35,13 @@ export class LineupComponent implements OnInit {
 
   playerSelected(player: Player) {
     console.log(player);
-    this.lineUp.push(player);
+    if (!this.lineUp.includes(player)) {
+      this.lineUp.push(player);
+    }
+  }
+
+  removePlayer(player: Player) {
+    this.lineUp = this.lineUp.filter(item => { return item !== player });
   }
 
   drop(event: CdkDragDrop<Player[]>) {

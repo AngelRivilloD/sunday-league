@@ -33,8 +33,11 @@
     </div>
 
     <div cdkDropList [cdkDropListData]="lineUp" class="lineup-list" (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of lineUp" cdkDrag>{{item.name}}</div>
+      <div class="example-box" *ngFor="let item of lineUp" cdkDrag>{{item.name}}
+        <mat-icon (click)="removePlayer(item)" aria-hidden="false" aria-label="Example home icon"
+          fontIcon="close"></mat-icon>
+      </div>
     </div>
   </div>
 </div>
-<img src="../../assets/pitch2.jpeg" alt="">
+<!-- <img src="../../assets/pitch2.jpeg" alt=""> -->
