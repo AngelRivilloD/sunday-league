@@ -1,0 +1,40 @@
+<div class="lineup-wrapper" cdkDropListGroup>
+  <div class="example-container">
+    <h2>Players</h2>
+
+    <h4>Goalkeepers</h4>
+    <div class="player" *ngFor="let item of goalkeepers" (click)="playerSelected(item)">{{item.name}}</div>
+
+    <h4>Defenses</h4>
+    <div class="player" *ngFor="let item of defenses" (click)="playerSelected(item)">{{item.name}}</div>
+
+    <h4>Midfielders</h4>
+    <div class="player" *ngFor="let item of midfielders" (click)="playerSelected(item)">{{item.name}}</div>
+
+    <h4>Attackers</h4>
+    <div class="player" *ngFor="let item of attackers" (click)="playerSelected(item)">{{item.name}}</div>
+
+  </div>
+
+  <div class="example-container">
+    <h2>Lineup</h2>
+    <div class="positions">
+      <div class="position">POR</div>
+      <div class="position">LD</div>
+      <div class="position">DFC</div>
+      <div class="position">DFC</div>
+      <div class="position">LI</div>
+      <div class="position">MCD</div>
+      <div class="position">MC</div>
+      <div class="position">MD</div>
+      <div class="position">MI</div>
+      <div class="position">MP</div>
+      <div class="position">DC</div>
+    </div>
+
+    <div cdkDropList [cdkDropListData]="lineUp" class="lineup-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of lineUp" cdkDrag>{{item.name}}</div>
+    </div>
+  </div>
+</div>
+<img src="../../assets/pitch2.jpeg" alt="">
