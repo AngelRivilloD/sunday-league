@@ -29,7 +29,7 @@
         <div class="bench-players">
             <h4>Cambios</h4>
             <div class="bench-player" *ngFor="let player of bench">
-                <img class="bench-player-img" src="../../assets/ozil.jpg" alt="">
+                <img class="bench-player-img" [src]="player.photo" alt="">
                 <div class="bench-player-text">
                     <div class="bench-player-number">{{player.number}}</div>
                     <div class="bench-player-name">
@@ -42,7 +42,7 @@
         <div class="dt">
             <h4>DT</h4>
             <div align="center">
-                <img class="dt-img" src="../../assets/ozil.jpg" alt="">
+                <img class="dt-img" src="../../assets/Antony.jpeg" alt="">
                 <div class="dt-text">
                     Antony
                 </div>

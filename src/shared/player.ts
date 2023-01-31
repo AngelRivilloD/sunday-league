@@ -4,6 +4,7 @@ export interface Player {
     nickName: string;
     number: number;
     position: 'DEF' | 'MED' | 'DEL' | 'POR';
+    photo?: string;
     goals?: number;
     assists?: number;
     captain?: boolean;

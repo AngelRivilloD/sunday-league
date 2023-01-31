@@ -12,6 +12,7 @@ import { StorageService } from 'src/services/storage.service';
 })
 export class LineupComponent implements OnInit {
 
+  public allPlayers: Player[] = [];
   public players: Player[] = [];
   public defenses: Player[] = [];
   public midfielders: Player[] = [];
@@ -24,11 +25,18 @@ export class LineupComponent implements OnInit {
   constructor(private _storageService: StorageService) { }
 
   ngOnInit(): void {
+    this.allPlayers = JSON.parse(JSON.stringify(playersData));
     this.players = playersData;
     this._fillPositions();
     console.log(this.defenses);
 
     console.log(this.players);
+  }
+
+  refresh() {
+    this.players = this.allPlayers;
+    this.lineUp = [];
+    this._fillPositions();
   }
 
   playerSelected(player: Player) {
@@ -50,6 +58,13 @@ export class LineupComponent implements OnInit {
     this._fillPositions();
   }
 
+  removeFromBench(player: Player) {
+    console.log(player);
+
+    this.players = this.players.filter(item => { return item !== player });
+    this._fillPositions();
+  }
+
   _fillPositions() {
     this.defenses = this.players.filter(player => player.position === "DEF");
     this.midfielders = this.players.filter(player => player.position === "MED");
@@ -59,7 +74,9 @@ export class LineupComponent implements OnInit {
 
   printLineup() {
     this._storageService.lineup = this.lineUp;
+    this._storageService.bench = this.players;
     console.log(this.lineUp);
+    console.log(this.players);
   }
 
   drop(event: CdkDragDrop<Player[]>) {

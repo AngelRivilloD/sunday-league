@@ -7,6 +7,7 @@ import { Player } from 'src/shared/player';
 export class StorageService {
 
   private _lineup: Player[] = [];
+  private _bench: Player[] = [];
 
   constructor() { }
 
@@ -16,5 +17,13 @@ export class StorageService {
 
   get lineup(): Player[] {
     return this._lineup || [];
+  }
+
+  set bench(players: Player[]) {
+    this._bench = players;
+  }
+
+  get bench(): Player[] {
+    return this._bench || [];
   }
 }
