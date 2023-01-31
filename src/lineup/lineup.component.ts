@@ -24,24 +24,36 @@ export class LineupComponent implements OnInit {
 
   ngOnInit(): void {
     this.players = playersData;
-    this.defenses = this.players.filter(player => player.position === "DEF");
-    this.midfielders = this.players.filter(player => player.position === "MED");
-    this.attackers = this.players.filter(player => player.position === "DEL");
-    this.goalkeepers = this.players.filter(player => player.position === "POR");
+    this._fillPositions();
     console.log(this.defenses);
 
     console.log(this.players);
   }
 
   playerSelected(player: Player) {
+    if (this.lineUp.length > 10) {
+      return;
+    }
     console.log(player);
     if (!this.lineUp.includes(player)) {
       this.lineUp.push(player);
     }
+
+    this.players = this.players.filter(item => { return item !== player });
+    this._fillPositions();
   }
 
   removePlayer(player: Player) {
     this.lineUp = this.lineUp.filter(item => { return item !== player });
+    this.players.push(player);
+    this._fillPositions();
+  }
+
+  _fillPositions() {
+    this.defenses = this.players.filter(player => player.position === "DEF");
+    this.midfielders = this.players.filter(player => player.position === "MED");
+    this.attackers = this.players.filter(player => player.position === "DEL");
+    this.goalkeepers = this.players.filter(player => player.position === "POR");
   }
 
   drop(event: CdkDragDrop<Player[]>) {
