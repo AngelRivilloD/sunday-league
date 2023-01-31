@@ -4,11 +4,11 @@
     }
 
     .lineup {
-        padding: 24px;
-        margin-top: -486px;
+        padding: 20px;
+        margin-top: -510px;
 
         &-row {
-            margin-top: 18px;
+            margin-top: 23px;
         }
 
         .goalkeeper,
@@ -27,11 +27,12 @@
     }
 
     .bench {
-        margin-top: 6px;
+        margin-top: 9px;
         padding: 16px;
 
         h4 {
             color: grey;
+            margin-bottom: 8px;
         }
 
         &-players {
@@ -49,11 +50,12 @@
             &-text {
                 display: flex;
                 align-items: center;
+                font-size: 12px;
             }
 
             &-img {
-                height: 30px;
-                border-radius: 30px;
+                height: 25px;
+                border-radius: 25px;
             }
 
             &-number {
@@ -68,6 +70,15 @@
             width: 20%;
             float: left;
             color: white;
+
+            &-text {
+                font-size: 12px;
+            }
+
+            &-img {
+                height: 35px;
+                border-radius: 35px;
+            }
         }
     }
 }
