@@ -25,6 +25,29 @@
         </div>
     </div>
     <div class="bench">
-        <div *ngFor="let player of bench">{{player.lastName}}</div>
+
+        <div class="bench-players">
+            <h4>Cambios</h4>
+            <div class="bench-player" *ngFor="let player of bench">
+                <img class="bench-player-img" src="../../assets/ozil.jpg" alt="">
+                <div class="bench-player-text">
+                    <div class="bench-player-number">{{player.number}}</div>
+                    <div class="bench-player-name">
+                        {{player.lastName}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dt">
+            <h4>DT</h4>
+            <img class="bench-player-img" src="../../assets/ozil.jpg" alt="">
+            <div class="bench-player-text">
+                <div class="bench-player-name">
+                    Antony
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

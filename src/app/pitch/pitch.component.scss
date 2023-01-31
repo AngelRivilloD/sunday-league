@@ -5,7 +5,7 @@
 
     .lineup {
         padding: 24px;
-        margin-top: -510px;
+        margin-top: -486px;
 
         &-row {
             margin-top: 18px;
@@ -23,6 +23,51 @@
         .center {
             padding-left: 50px;
             padding-right: 50px;
+        }
+    }
+
+    .bench {
+        margin-top: 6px;
+        padding: 16px;
+
+        h4 {
+            color: grey;
+        }
+
+        &-players {
+            float: left;
+            width: 80%;
+        }
+
+        &-player {
+            display: flex;
+            width: 50%;
+            float: left;
+            color: white;
+            padding-bottom: 8px;
+
+            &-text {
+                display: flex;
+                align-items: center;
+            }
+
+            &-img {
+                height: 30px;
+                border-radius: 30px;
+            }
+
+            &-number {
+                font-weight: 500;
+                margin-right: 5px;
+                margin-left: 5px;
+                color: grey;
+            }
+        }
+
+        .dt {
+            width: 20%;
+            float: left;
+            color: white;
         }
     }
 }
