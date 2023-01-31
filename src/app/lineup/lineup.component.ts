@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { playersData } from "../shared/players";
+import { playersData } from "../../shared/players";
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Player } from "./../shared/player";
+import { Player } from "../../shared/player";
+import { StorageService } from 'src/services/storage.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class LineupComponent implements OnInit {
 
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
 
-  constructor() { }
+  constructor(private _storageService: StorageService) { }
 
   ngOnInit(): void {
     this.players = playersData;
@@ -54,6 +55,11 @@ export class LineupComponent implements OnInit {
     this.midfielders = this.players.filter(player => player.position === "MED");
     this.attackers = this.players.filter(player => player.position === "DEL");
     this.goalkeepers = this.players.filter(player => player.position === "POR");
+  }
+
+  printLineup() {
+    this._storageService.lineup = this.lineUp;
+    console.log(this.lineUp);
   }
 
   drop(event: CdkDragDrop<Player[]>) {

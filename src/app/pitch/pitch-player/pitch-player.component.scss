@@ -1,0 +1,23 @@
+.player {
+    text-align: center;
+
+    &-img {
+        height: 40px;
+        border-radius: 40px;
+    }
+
+    &-text {
+        display: flex;
+        color: white;
+    }
+
+    &-name {
+        color: white;
+        font-weight: 100;
+    }
+
+    &-number {
+        font-weight: 500;
+        margin-right: 5px;
+    }
+}

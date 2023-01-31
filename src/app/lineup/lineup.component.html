@@ -3,16 +3,24 @@
     <h2>Players</h2>
 
     <h4 *ngIf="goalkeepers.length > 0">Goalkeepers</h4>
-    <div class="player" *ngFor="let item of goalkeepers" (click)="playerSelected(item)">{{item.name}}</div>
+    <div class="player" *ngFor="let item of goalkeepers" (click)="playerSelected(item)">{{item.firstName}}
+      {{item.lastName}}
+    </div>
 
     <h4 *ngIf="defenses.length > 0">Defenses</h4>
-    <div class="player" *ngFor="let item of defenses" (click)="playerSelected(item)">{{item.name}}</div>
+    <div class="player" *ngFor="let item of defenses" (click)="playerSelected(item)">{{item.firstName}}
+      {{item.lastName}}
+    </div>
 
     <h4 *ngIf="midfielders.length > 0">Midfielders</h4>
-    <div class="player" *ngFor="let item of midfielders" (click)="playerSelected(item)">{{item.name}}</div>
+    <div class="player" *ngFor="let item of midfielders" (click)="playerSelected(item)">{{item.firstName}}
+      {{item.lastName}}
+    </div>
 
     <h4 *ngIf="attackers.length > 0">Attackers</h4>
-    <div class="player" *ngFor="let item of attackers" (click)="playerSelected(item)">{{item.name}}</div>
+    <div class="player" *ngFor="let item of attackers" (click)="playerSelected(item)">{{item.firstName}}
+      {{item.lastName}}
+    </div>
 
   </div>
 
@@ -33,12 +41,12 @@
 
     <div cdkDropList [cdkDropListData]="lineUp" class="lineup-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of lineUp" cdkDrag>
-        <div class="lineup-list-name">{{item.name}}</div>
+        <div class="lineup-list-name">{{item.firstName}} {{item.lastName}}</div>
         <mat-icon (click)="removePlayer(item)" aria-hidden="false" aria-label="Example home icon"
           fontIcon="close"></mat-icon>
       </div>
     </div>
-    <button class="done-button" mat-raised-button>DONE</button>
+    <button class="done-button" [routerLink]="['/pitch']" (click)="printLineup()" mat-raised-button>DONE</button>
   </div>
 </div>
 <!-- <img src="../../assets/pitch2.jpeg" alt=""> -->

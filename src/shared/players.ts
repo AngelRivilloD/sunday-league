@@ -2,92 +2,128 @@ import { Player } from "./player";
 
 export const playersData: Player[] = [
     {
-        "name": "Gustavo Rojas",
+        "firstName": "Gustavo",
+        "lastName": "Rojas",
+        "nickName": "",
         "number": 1,
         "position": "POR"
     },
     {
-        "name": "Angel Rivillo",
+        "firstName": "Angel",
+        "lastName": "Rivillo",
+        "nickName": "",
         "number": 16,
         "position": "DEF"
     },
     {
-        "name": "Manuel Cabana",
+        "firstName": "Manuel",
+        "lastName": "Cabana",
+        "nickName": "",
         "number": 4,
         "position": "DEF"
     },
     {
-        "name": "Tonino Cogliano",
+        "firstName": "Tonino",
+        "lastName": "Cogliano",
+        "nickName": "",
         "number": 5,
         "position": "DEF"
     },
     {
-        "name": "Victor Garban",
+        "firstName": "Victor",
+        "lastName": "Garban",
+        "nickName": "",
         "number": 13,
         "position": "DEF"
     },
     {
-        "name": "Nelson Ferreira",
+        "firstName": "Nelson",
+        "lastName": "Ferreira",
+        "nickName": "",
         "number": 15,
         "position": "DEF"
     },
     {
-        "name": "Ronny De Abreu",
+        "firstName": "Ronny",
+        "lastName": "De Abreu",
+        "nickName": "",
         "number": 19,
         "position": "DEF"
     },
     {
-        "name": "Raul Goncalves",
+        "firstName": "Raul",
+        "lastName": "Goncalves",
+        "nickName": "",
         "number": 28,
         "position": "DEF"
     },
     {
-        "name": "Daniel Hernández",
+        "firstName": "Daniel",
+        "lastName": "Hernández",
+        "nickName": "",
         "number": 79,
         "position": "DEF"
     },
     {
-        "name": "Gonzalo Casal",
+        "firstName": "Gonzalo",
+        "lastName": "Casal",
+        "nickName": "",
         "number": 2,
         "position": "MED"
     },
     {
-        "name": "Gabriel Di Salvo",
+        "firstName": "Gabriel",
+        "lastName": "Di Salvo",
+        "nickName": "",
         "number": 8,
         "position": "MED"
     },
     {
-        "name": "Luis Miguel García",
+        "firstName": "Luis Miguel",
+        "lastName": "García",
+        "nickName": "",
         "number": 14,
         "position": "MED"
     },
     {
-        "name": "Angel Rodriguez",
+        "firstName": "Angel",
+        "lastName": "Rodriguez",
+        "nickName": "",
         "number": 22,
         "position": "MED"
     },
     {
-        "name": "Geanluca Medaglia",
+        "firstName": "Geanluca",
+        "lastName": "Medaglia",
+        "nickName": "",
         "number": 23,
         "position": "MED"
     },
     {
-        "name": "Giancarlo Santoro",
+        "firstName": "Giancarlo",
+        "lastName": "Santoro",
+        "nickName": "",
         "number": 20,
         "position": "MED"
     },
     {
-        "name": "Ricardo Cogliano",
+        "firstName": "Ricardo",
+        "lastName": "Cogliano",
+        "nickName": "",
         "number": 17,
         "position": "DEL"
     },
     {
-        "name": "Samuel Añez",
+        "firstName": "Samuel",
+        "lastName": "Añez",
+        "nickName": "",
         "number": 18,
         "position": "DEL"
     },
     {
-        "name": "Alejandro Petruzzella",
+        "firstName": "Alejandro",
+        "lastName": "Petruzzella",
+        "nickName": "",
         "number": 91,
         "position": "DEL"
     }

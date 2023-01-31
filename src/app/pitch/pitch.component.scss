@@ -1,0 +1,28 @@
+.pitch-wrapper {
+    .pitch-img {
+        width: 100%;
+    }
+
+    .lineup {
+        padding: 24px;
+        margin-top: -510px;
+
+        &-row {
+            margin-top: 18px;
+        }
+
+        .goalkeeper,
+        .defenders,
+        .center,
+        .midfielders,
+        .attacker {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .center {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}
