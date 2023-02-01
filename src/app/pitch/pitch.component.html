@@ -15,26 +15,26 @@
     <img class="pitch-img" src="../../assets/pitchblack2.png" alt="">
     <div class="lineup">
         <div class="lineup-row attacker">
-            <pitch-player [player]="lineUp[10]"></pitch-player>
+            <pitch-player [player]="lineUp[10]" (click)="selectCaptain(lineUp[10])"></pitch-player>
         </div>
         <div class="lineup-row midfielders">
-            <pitch-player [player]="lineUp[8]"></pitch-player>
-            <pitch-player [player]="lineUp[9]"></pitch-player>
-            <pitch-player [player]="lineUp[7]"></pitch-player>
+            <pitch-player [player]="lineUp[8]" (click)="selectCaptain(lineUp[8])"></pitch-player>
+            <pitch-player [player]="lineUp[9]" (click)="selectCaptain(lineUp[9])"></pitch-player>
+            <pitch-player [player]="lineUp[7]" (click)="selectCaptain(lineUp[7])"></pitch-player>
         </div>
         <div class="lineup-row center">
-            <pitch-player [player]="lineUp[6]"></pitch-player>
-            <pitch-player [player]="lineUp[5]"></pitch-player>
+            <pitch-player [player]="lineUp[6]" (click)="selectCaptain(lineUp[6])"></pitch-player>
+            <pitch-player [player]="lineUp[5]" (click)="selectCaptain(lineUp[5])"></pitch-player>
         </div>
 
         <div class="lineup-row defenders">
-            <pitch-player [player]="lineUp[4]"></pitch-player>
-            <pitch-player [player]="lineUp[3]"></pitch-player>
-            <pitch-player [player]="lineUp[2]"></pitch-player>
-            <pitch-player [player]="lineUp[1]"></pitch-player>
+            <pitch-player [player]="lineUp[4]" (click)="selectCaptain(lineUp[4])"></pitch-player>
+            <pitch-player [player]="lineUp[3]" (click)="selectCaptain(lineUp[3])"></pitch-player>
+            <pitch-player [player]="lineUp[2]" (click)="selectCaptain(lineUp[2])"></pitch-player>
+            <pitch-player [player]="lineUp[1]" (click)="selectCaptain(lineUp[1])"></pitch-player>
         </div>
         <div class="lineup-row goalkeeper">
-            <pitch-player [player]="lineUp[0]"></pitch-player>
+            <pitch-player [player]="lineUp[0]" (click)="selectCaptain(lineUp[0])"></pitch-player>
         </div>
     </div>
     <div class="bench">

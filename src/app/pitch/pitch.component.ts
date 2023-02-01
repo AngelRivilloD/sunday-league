@@ -77,6 +77,7 @@ export class PitchComponent implements OnInit {
     "firstName": "Antonio",
     "lastName": "Di Benedetto",
     "nickName": "",
+    "captain": true,
     "photo": "../../../assets/Antony.jpeg",
     "number": 3,
     "position": "MED"
@@ -224,5 +225,10 @@ export class PitchComponent implements OnInit {
   ngOnInit(): void {
     this.lineUp = (this._storageService.lineup.length > 0) ? this._storageService.lineup : this.lineUp;
     this.bench = (this._storageService.bench.length > 0) ? this._storageService.bench : this.bench;
+  }
+
+  selectCaptain(player: Player) {
+    this.lineUp.forEach(player => player.captain = false);
+    player.captain = true;
   }
 }

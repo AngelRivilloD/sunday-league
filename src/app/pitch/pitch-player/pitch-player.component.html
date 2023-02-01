@@ -1,5 +1,6 @@
 <div class="player" *ngIf="player">
     <img class="player-img" [src]="player.photo" alt="">
+    <div class="player-captain" *ngIf="player.captain">C</div>
     <div class="player-text">
         <div class="player-number">{{player.number}}</div>
         <div class="player-name">{{player.lastName}}</div>

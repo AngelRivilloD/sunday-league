@@ -8,6 +8,17 @@
         border-radius: 40px;
     }
 
+    &-captain {
+        width: 18px;
+        height: 18px;
+        background-color: #b50c0c;
+        border-radius: 40px;
+        font-weight: 800;
+        color: white;
+        margin-top: -18px;
+        margin-left: 56px;
+    }
+
     &-text {
         display: flex;
         color: white;
