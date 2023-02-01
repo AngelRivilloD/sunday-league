@@ -1,5 +1,18 @@
 <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/lineup']" disabled>
+            <span>Convocatoria</span>
+        </button>
+        <button mat-menu-item [routerLink]="['/lineup']">
+            <span>Alineación</span>
+        </button>
+        <button mat-menu-item [routerLink]="['/highlights']">
+            <span>Resumen</span>
+        </button>
+    </mat-menu>
     <span>Sunday League</span>
-    <button [routerLink]="['/lineup']" class=" lineup-button" mat-raised-button>Lineup</button>
 </mat-toolbar>
 <router-outlet></router-outlet>

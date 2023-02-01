@@ -33,7 +33,6 @@
   </div>
 
   <div class="lineup-container">
-    <h3>Alineacion</h3>
     <div class="positions">
       <div class="position">POR</div>
       <div class="position">LD</div>
@@ -54,7 +53,12 @@
         <mat-icon (click)="removePlayer(item)" fontIcon="close"></mat-icon>
       </div>
     </div>
-    <button class="done-button" [routerLink]="['/pitch']" (click)="printLineup()" mat-raised-button>DONE</button>
+    <button class="done-button" [routerLink]="['/pitch']" (click)="printLineup()" mat-raised-button>
+      <mat-icon fontIcon="people">people</mat-icon>
+      ALINEACION</button>
+    <button class="done-button" [routerLink]="['/highlights']" (click)="printLineup()" mat-raised-button>
+      <mat-icon fontIcon="poll">poll</mat-icon>
+      HIGHLIGHTS</button>
   </div>
 </div>
 <!-- <img src="../../assets/pitch2.jpeg" alt=""> -->
