@@ -9,179 +9,215 @@ import { Player } from 'src/shared/player';
 })
 export class PitchComponent implements OnInit {
 
-  public lineUp: Player[] = [
-    {
-      "firstName": "Gustavo",
-      "lastName": "Rojas",
-      "nickName": "",
-      "number": 1,
-      "position": "POR"
-    },
-    {
-      "firstName": "Victor",
-      "lastName": "Garban",
-      "nickName": "",
-      "number": 13,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Angel",
-      "lastName": "Rivillo",
-      "nickName": "",
-      "number": 16,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Manuel",
-      "lastName": "Cabana",
-      "nickName": "",
-      "number": 4,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Daniel",
-      "lastName": "Hernández",
-      "nickName": "",
-      "number": 79,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Luis Miguel",
-      "lastName": "García",
-      "nickName": "",
-      "number": 14,
-      "position": "MED"
-    },
-    {
-      "firstName": "Gabriel",
-      "lastName": "Di Salvo",
-      "nickName": "",
-      "number": 8,
-      "position": "MED"
-    },
-    {
-      "firstName": "Angel",
-      "lastName": "Rodriguez",
-      "nickName": "",
-      "number": 22,
-      "position": "MED"
-    },
-    {
-      "firstName": "Geanluca",
-      "lastName": "Medaglia",
-      "nickName": "",
-      "number": 23,
-      "position": "MED"
-    },
-    {
-      "firstName": "Samuel",
-      "lastName": "Añez",
-      "nickName": "",
-      "number": 18,
-      "position": "DEL"
-    },
-    {
-      "firstName": "Alejandro",
-      "lastName": "Petruzzella",
-      "nickName": "",
-      "number": 91,
-      "position": "DEL"
-    }
-  ];
+  public lineUp: Player[] = [{
+    "firstName": "Gabriel",
+    "lastName": "Di Salvo",
+    "nickName": "",
+    "photo": "../../../assets/Gabo.jpeg",
+    "number": 8,
+    "position": "MED"
+  },
+  {
+    "firstName": "Luis Miguel",
+    "lastName": "García",
+    "nickName": "",
+    "photo": "../../../assets/Luismi.jpeg",
+    "number": 14,
+    "position": "MED"
+  },
+  {
+    "firstName": "Antonio",
+    "lastName": "Di Benedetto",
+    "nickName": "",
+    "photo": "../../../assets/Antony.jpeg",
+    "number": 3,
+    "position": "MED"
+  },
+  {
+    "firstName": "Geanluca",
+    "lastName": "Medaglia",
+    "nickName": "",
+    "photo": "../../../assets/Luca.jpeg",
+    "number": 23,
+    "position": "MED"
+  },
+  {
+    "firstName": "Giancarlo",
+    "lastName": "Santoro",
+    "nickName": "",
+    "photo": "../../../assets/Santoro.jpeg",
+    "number": 20,
+    "position": "MED"
+  },
+  {
+    "firstName": "Richard",
+    "lastName": "Aleixo",
+    "nickName": "",
+    "photo": "../../../assets/Richard.jpeg",
+    "number": 6,
+    "position": "MED"
+  },
+  {
+    "firstName": "Antonio",
+    "lastName": "Di Benedetto",
+    "nickName": "",
+    "photo": "../../../assets/Antony.jpeg",
+    "number": 3,
+    "position": "MED"
+  },
+  {
+    "firstName": "Gian",
+    "lastName": "Di Salvo",
+    "nickName": "",
+    "photo": "../../../assets/Chipi.jpeg",
+    "number": 7,
+    "position": "MED"
+  },
+  {
+    "firstName": "Antonio",
+    "lastName": "Di Benedetto",
+    "nickName": "",
+    "photo": "../../../assets/Antony.jpeg",
+    "number": 3,
+    "position": "MED"
+  },
+  {
+    "firstName": "Samuel",
+    "lastName": "Añez",
+    "nickName": "",
+    "photo": "../../../assets/Samuel.jpeg",
+    "number": 18,
+    "position": "DEL"
+  },
+  {
+    "firstName": "Antonio",
+    "lastName": "Di Benedetto",
+    "nickName": "",
+    "photo": "../../../assets/Antony.jpeg",
+    "number": 3,
+    "position": "MED"
+  },
+  {
+    "firstName": "Grauly",
+    "lastName": "Luis",
+    "nickName": "",
+    "photo": "../../../assets/Grauly.jpeg",
+    "number": 11,
+    "position": "DEL"
+  },
+  {
+    "firstName": "Elio",
+    "lastName": "Rodriguez",
+    "nickName": "",
+    "photo": "../../../assets/Elio.jpeg",
+    "number": 9,
+    "position": "DEL"
+  }];
 
-  public bench: Player[] = [
-    {
-      "firstName": "Manuel",
-      "lastName": "Cabana",
-      "nickName": "",
-      "number": 4,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Tonino",
-      "lastName": "Cogliano",
-      "nickName": "",
-      "number": 5,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Ronny",
-      "lastName": "De Abreu",
-      "nickName": "",
-      "number": 19,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Raul",
-      "lastName": "Goncalves",
-      "nickName": "",
-      "number": 28,
-      "position": "DEF"
-    },
-    {
-      "firstName": "Gonzalo",
-      "lastName": "Casal",
-      "nickName": "",
-      "number": 2,
-      "position": "MED"
-    },
-    {
-      "firstName": "Geanluca",
-      "lastName": "Medaglia",
-      "nickName": "",
-      "number": 23,
-      "position": "MED"
-    },
-    {
-      "firstName": "Giancarlo",
-      "lastName": "Santoro",
-      "nickName": "",
-      "number": 20,
-      "position": "MED"
-    },
-    {
-      "firstName": "Antonio",
-      "lastName": "Di Benedetto",
-      "nickName": "",
-      "number": 3,
-      "position": "MED"
-    },
-    {
-      "firstName": "Gian",
-      "lastName": "Di Salvo",
-      "nickName": "",
-      "number": 7,
-      "position": "MED"
-    },
-    {
-      "firstName": "Ricardo",
-      "lastName": "Cogliano",
-      "nickName": "",
-      "number": 17,
-      "position": "DEL"
-    },
-    {
-      "firstName": "Alejandro",
-      "lastName": "Petruzzella",
-      "nickName": "",
-      "number": 91,
-      "position": "DEL"
-    },
-    {
-      "firstName": "Elio",
-      "lastName": "Rodriguez",
-      "nickName": "",
-      "number": 9,
-      "position": "DEL"
-    },
-    {
-      "firstName": "Andres",
-      "lastName": "Sepulveda",
-      "nickName": "",
-      "number": 32,
-      "position": "DEL"
-    }
-  ];
+  public bench: Player[] = [{
+    "firstName": "Gabriel",
+    "lastName": "Di Salvo",
+    "nickName": "",
+    "photo": "../../../assets/Gabo.jpeg",
+    "number": 8,
+    "position": "MED"
+  },
+  {
+    "firstName": "Luis Miguel",
+    "lastName": "García",
+    "nickName": "",
+    "photo": "../../../assets/Luismi.jpeg",
+    "number": 14,
+    "position": "MED"
+  },
+  {
+    "firstName": "Angel",
+    "lastName": "Rodriguez",
+    "nickName": "",
+    "photo": "../../../assets/Angel.jpeg",
+    "number": 22,
+    "position": "MED"
+  },
+  {
+    "firstName": "Geanluca",
+    "lastName": "Medaglia",
+    "nickName": "",
+    "photo": "../../../assets/Luca.jpeg",
+    "number": 23,
+    "position": "MED"
+  },
+  {
+    "firstName": "Giancarlo",
+    "lastName": "Santoro",
+    "nickName": "",
+    "photo": "../../../assets/Santoro.jpeg",
+    "number": 20,
+    "position": "MED"
+  },
+  {
+    "firstName": "Richard",
+    "lastName": "Aleixo",
+    "nickName": "",
+    "photo": "../../../assets/Richard.jpeg",
+    "number": 6,
+    "position": "MED"
+  },
+  {
+    "firstName": "Antonio",
+    "lastName": "Di Benedetto",
+    "nickName": "",
+    "photo": "../../../assets/Antony.jpeg",
+    "number": 3,
+    "position": "MED"
+  },
+  {
+    "firstName": "Gian",
+    "lastName": "Di Salvo",
+    "nickName": "",
+    "photo": "../../../assets/Chipi.jpeg",
+    "number": 7,
+    "position": "MED"
+  },
+  {
+    "firstName": "Ricardo",
+    "lastName": "Cogliano",
+    "nickName": "",
+    "photo": "../../../assets/KKto.jpeg",
+    "number": 17,
+    "position": "DEL"
+  },
+  {
+    "firstName": "Samuel",
+    "lastName": "Añez",
+    "nickName": "",
+    "photo": "../../../assets/Samuel.jpeg",
+    "number": 18,
+    "position": "DEL"
+  },
+  {
+    "firstName": "Alejandro",
+    "lastName": "Petruzzella",
+    "nickName": "",
+    "photo": "../../../assets/Petru.jpeg",
+    "number": 91,
+    "position": "DEL"
+  },
+  {
+    "firstName": "Grauly",
+    "lastName": "Luis",
+    "nickName": "",
+    "photo": "../../../assets/Grauly.jpeg",
+    "number": 11,
+    "position": "DEL"
+  },
+  {
+    "firstName": "Elio",
+    "lastName": "Rodriguez",
+    "nickName": "",
+    "photo": "../../../assets/Elio.jpeg",
+    "number": 9,
+    "position": "DEL"
+  }];
 
   constructor(private _storageService: StorageService) { }
 
