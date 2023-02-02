@@ -39,7 +39,7 @@
     </div>
     <div class="bench">
 
-        <div class="bench-players">
+        <div class="bench-players" [ngClass]="{'full-width': highLightsMode}">
             <h4>Cambios</h4>
             <div class="bench-player" *ngFor="let player of bench">
                 <img class="bench-player-img" [src]="player.photo" alt="">
@@ -49,10 +49,21 @@
                         {{player.lastName}}
                     </div>
                 </div>
+                <div class="bench-player-red-card" *ngIf="player.redCard && highLightsMode"></div>
+                <div class="bench-player-assists" *ngIf="player.assists && highLightsMode">
+                    <img src="../../../assets/assists2.jpg" alt="">
+                    <div class="bench-player-assists-text" *ngIf="player.assists > 1">{{player.assists}}</div>
+                </div>
+                <div class="bench-player-goals" *ngIf="player.goals && highLightsMode">
+
+                    <img src="../../../assets/football.png" alt="">
+                    <div class="bench-player-goals-text" *ngIf="player.goals > 1">{{player.goals}}</div>
+                </div>
+                <mat-icon class="bench-player-mvp" *ngIf="player.mvp && highLightsMode">star</mat-icon>
             </div>
         </div>
 
-        <div class="dt">
+        <div class="dt" *ngIf="!highLightsMode">
             <h4>DT</h4>
             <div align="center">
                 <img class="dt-img" src="../../assets/Antony.jpeg" alt="">

@@ -37,6 +37,11 @@
         margin-top: 9px;
         padding: 16px;
 
+        .full-width {
+            width: 100%;
+            padding-left: 10px;
+        }
+
         h4 {
             color: grey;
             margin-bottom: 8px;
@@ -53,6 +58,61 @@
             float: left;
             color: white;
             padding-bottom: 8px;
+
+            &-red-card {
+                background-color: #d32626;
+                height: 14px;
+                width: 10px;
+                position: absolute;
+                margin-left: -5px;
+                margin-top: -4px;
+            }
+
+            &-mvp {
+                position: absolute;
+                margin-left: -12px;
+                margin-top: 9px;
+                font-size: 18px;
+                color: #ffc800;
+            }
+
+            &-goals {
+                margin-top: 4px;
+                margin-left: 4px;
+                color: #efefef;
+                font-weight: 500;
+                display: flex;
+                justify-content: start;
+
+                &-text {
+                    margin-left: 2px;
+                    font: 13px;
+                }
+
+                img {
+                    height: 16px;
+                    border-radius: 12px;
+                }
+            }
+
+            &-assists {
+                margin-top: 4px;
+                margin-left: 4px;
+                color: #efefef;
+                font-weight: 500;
+                display: flex;
+                justify-content: start;
+
+                &-text {
+                    margin-left: 2px;
+                    font: 13px;
+                }
+
+                img {
+                    height: 16px;
+                    border-radius: 12px;
+                }
+            }
 
             &-text {
                 display: flex;

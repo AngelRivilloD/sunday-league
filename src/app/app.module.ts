@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
 import { PitchComponent } from './pitch/pitch.component';
 import { PitchPlayerComponent } from './pitch/pitch-player/pitch-player.component';
 import { HighlightsComponent } from './highlights/highlights.component';
@@ -32,7 +33,8 @@ import { HighlightsComponent } from './highlights/highlights.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

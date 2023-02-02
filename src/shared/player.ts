@@ -8,4 +8,6 @@ export interface Player {
     goals?: number;
     assists?: number;
     captain?: boolean;
+    redCard?: boolean;
+    mvp?: boolean;
 }

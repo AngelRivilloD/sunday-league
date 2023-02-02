@@ -1,4 +1,23 @@
 .highlights {
+
+    background-color: #33383c;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #585858;
+
+        .mvp {
+            height: 56px;
+        }
+    }
+
+    ::ng-deep mat-tab-header {
+        background-color: #585858;
+    }
+
     .players-list {
         padding-left: 20px;
         padding-right: 20px;
@@ -35,6 +54,16 @@
             button {
                 margin-right: 10px;
             }
+        }
+    }
+
+    .red-cards-list {
+        .player-name {
+            width: 75%;
+        }
+
+        .player-buttons {
+            width: 15%;
         }
     }
 }

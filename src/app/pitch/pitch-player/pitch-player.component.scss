@@ -3,6 +3,63 @@
     width: 80px;
     font-size: 13px;
 
+    &-red-card {
+        background-color: #d32626;
+        height: 14px;
+        width: 10px;
+        position: absolute;
+        margin-left: 14px;
+    }
+
+    &-mvp {
+        position: absolute;
+        margin-left: -14px;
+        margin-top: 20px;
+        color: #ffc800;
+    }
+
+    &-goals {
+        position: absolute;
+        margin-left: 55px;
+        margin-top: -10px;
+        color: #efefef;
+        font-weight: 500;
+        display: flex;
+        justify-content: start;
+        width: 26px;
+
+        &-text {
+            margin-left: 4px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        img {
+            height: 16px;
+            border-radius: 12px;
+        }
+    }
+
+    &-assists {
+        position: absolute;
+        margin-left: 55px;
+        margin-top: 10px;
+        color: #efefef;
+        font-weight: 500;
+        display: flex;
+        justify-content: start;
+        width: 26px;
+
+        &-text {
+            margin-left: 4px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        img {
+            height: 16px;
+            border-radius: 12px;
+        }
+    }
+
     &-img {
         height: 40px;
         border-radius: 40px;

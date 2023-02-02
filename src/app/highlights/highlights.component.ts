@@ -9,6 +9,8 @@ import { Player } from 'src/shared/player';
 })
 export class HighlightsComponent implements OnInit {
 
+  public allPlayers: Player[] = [];
+
   public lineUp: Player[] = [{
     "firstName": "Gabriel",
     "lastName": "Di Salvo",
@@ -99,110 +101,71 @@ export class HighlightsComponent implements OnInit {
     "position": "MED"
   }];
 
-  public bench: Player[] = [{
-    "firstName": "Gabriel",
-    "lastName": "Di Salvo",
-    "nickName": "",
-    "photo": "../../../assets/Gabo.jpeg",
-    "number": 8,
-    "position": "MED"
-  },
-  {
-    "firstName": "Luis Miguel",
-    "lastName": "García",
-    "nickName": "",
-    "photo": "../../../assets/Luismi.jpeg",
-    "number": 14,
-    "position": "MED"
-  },
-  {
-    "firstName": "Angel",
-    "lastName": "Rodriguez",
-    "nickName": "",
-    "photo": "../../../assets/Angel.jpeg",
-    "number": 22,
-    "position": "MED"
-  },
-  {
-    "firstName": "Geanluca",
-    "lastName": "Medaglia",
-    "nickName": "",
-    "photo": "../../../assets/Luca.jpeg",
-    "number": 23,
-    "position": "MED"
-  },
-  {
-    "firstName": "Giancarlo",
-    "lastName": "Santoro",
-    "nickName": "",
-    "photo": "../../../assets/Santoro.jpeg",
-    "number": 20,
-    "position": "MED"
-  },
-  {
-    "firstName": "Richard",
-    "lastName": "Aleixo",
-    "nickName": "",
-    "photo": "../../../assets/Richard.jpeg",
-    "number": 6,
-    "position": "MED"
-  },
-  {
-    "firstName": "Antonio",
-    "lastName": "Di Benedetto",
-    "nickName": "",
-    "photo": "../../../assets/Antony.jpeg",
-    "number": 3,
-    "position": "MED"
-  },
-  {
-    "firstName": "Gian",
-    "lastName": "Di Salvo",
-    "nickName": "",
-    "photo": "../../../assets/Chipi.jpeg",
-    "number": 7,
-    "position": "MED"
-  },
-  {
-    "firstName": "Ricardo",
-    "lastName": "Cogliano",
-    "nickName": "",
-    "photo": "../../../assets/KKto.jpeg",
-    "number": 17,
-    "position": "DEL"
-  },
-  {
-    "firstName": "Samuel",
-    "lastName": "Añez",
-    "nickName": "",
-    "photo": "../../../assets/Samuel.jpeg",
-    "number": 18,
-    "position": "DEL"
-  },
-  {
-    "firstName": "Alejandro",
-    "lastName": "Petruzzella",
-    "nickName": "",
-    "photo": "../../../assets/Petru.jpeg",
-    "number": 91,
-    "position": "DEL"
-  },
-  {
-    "firstName": "Grauly",
-    "lastName": "Luis",
-    "nickName": "",
-    "photo": "../../../assets/Grauly.jpeg",
-    "number": 11,
-    "position": "DEL"
-  },
-  {
-    "firstName": "Elio",
-    "lastName": "Rodriguez",
-    "nickName": "",
-    "photo": "../../../assets/Elio.jpeg",
-    "number": 9,
-    "position": "DEL"
-  }];
+  public bench: Player[] = [
+    {
+      "firstName": "Ricardo",
+      "lastName": "Cogliano",
+      "nickName": "",
+      "photo": "../../../assets/KKto.jpeg",
+      "number": 17,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Samuel",
+      "lastName": "Añez",
+      "nickName": "",
+      "photo": "../../../assets/Samuel.jpeg",
+      "number": 18,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Alejandro",
+      "lastName": "Petruzzella",
+      "nickName": "",
+      "photo": "../../../assets/Petru.jpeg",
+      "number": 91,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Grauly",
+      "lastName": "Luis",
+      "nickName": "",
+      "photo": "../../../assets/Grauly.jpeg",
+      "number": 11,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Elio",
+      "lastName": "Rodriguez",
+      "nickName": "",
+      "photo": "../../../assets/Elio.jpeg",
+      "number": 9,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Alejandro",
+      "lastName": "Petruzzella",
+      "nickName": "",
+      "photo": "../../../assets/Petru.jpeg",
+      "number": 91,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Grauly",
+      "lastName": "Luis",
+      "nickName": "",
+      "photo": "../../../assets/Grauly.jpeg",
+      "number": 11,
+      "position": "DEL"
+    },
+    {
+      "firstName": "Elio",
+      "lastName": "Rodriguez",
+      "nickName": "",
+      "photo": "../../../assets/Elio.jpeg",
+      "number": 9,
+      "position": "DEL"
+    }];
 
 
   constructor(private _storageService: StorageService) { }
@@ -210,6 +173,7 @@ export class HighlightsComponent implements OnInit {
   ngOnInit() {
     this.lineUp = (this._storageService.lineup.length > 0) ? this._storageService.lineup : this.lineUp;
     this.bench = (this._storageService.bench.length > 0) ? this._storageService.bench : this.bench;
+    this.allPlayers = this.lineUp.concat(this.bench);
   }
 
   addGoal(player: Player) {
@@ -218,5 +182,30 @@ export class HighlightsComponent implements OnInit {
 
   removeGoal(player: Player) {
     player.goals = (player.goals) ? player.goals - 1 : 1;
+  }
+
+  addAssist(player: Player) {
+    player.assists = (player.assists) ? player.assists + 1 : 1;
+  }
+
+  removeAssist(player: Player) {
+    player.assists = (player.assists) ? player.assists - 1 : 1;
+  }
+
+  changeRedCard(player: Player) {
+    player.redCard = !player.redCard;
+  }
+
+  print() {
+    console.log(this.allPlayers);
+    this._storageService.lineup = this.allPlayers.splice(0, 11);
+    this._storageService.bench = this.allPlayers;
+
+    console.log(this._storageService.lineup);
+    console.log(this._storageService.bench);
+  }
+
+  select(player: Player) {
+    player.mvp = true;
   }
 }

@@ -1,25 +1,23 @@
 <div class="highlights">
+    <div class="highlights-header">
+        <div class="mvp">
+            <mat-form-field appearance="outline">
+                <mat-label>Select MVP</mat-label>
+                <mat-select (selectionChange)="select($event.value)">
+                    <mat-option [value]="player" *ngFor="let player of allPlayers">{{player.firstName}}
+                        {{player.lastName}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="cta">
+            <button color="primary" (click)="print()" class="done-button" [routerLink]="['/pitch']"
+                mat-raised-button>DONE</button>
+        </div>
+    </div>
     <mat-tab-group>
         <mat-tab label="Goles">
             <div class="players-list">
-                <h4>Titulares</h4>
-                <div class="player" *ngFor="let player of lineUp">
-                    <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
-                    <div class="player-amount">
-                        <span *ngIf="player.goals">{{player.goals}}</span>
-                    </div>
-                    <div class="player-buttons">
-                        <button mat-mini-fab color="primary" (click)="addGoal(player)">
-                            <mat-icon>add</mat-icon>
-                        </button>
-                        <button mat-mini-fab color="accent" (click)="removeGoal(player)" [disabled]="!player.goals">
-                            <mat-icon>remove</mat-icon>
-                        </button>
-                    </div>
-                </div>
-                <br>
-                <h4>Banca</h4>
-                <div class="player" *ngFor="let player of bench">
+                <div class="player" *ngFor="let player of allPlayers">
                     <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
                     <div class="player-amount">
                         <span *ngIf="player.goals">{{player.goals}}</span>
@@ -35,8 +33,42 @@
                 </div>
             </div>
         </mat-tab>
-        <mat-tab label="Asistencias">Asistencias</mat-tab>
-        <mat-tab label="Rojas">Rojas</mat-tab>
+        <mat-tab label="Asistencias">
+            <div class="players-list">
+                <div class="player" *ngFor="let player of allPlayers">
+                    <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
+                    <div class="player-amount">
+                        <span *ngIf="player.assists">{{player.assists}}</span>
+                    </div>
+                    <div class="player-buttons">
+                        <button mat-mini-fab color="primary" (click)="addAssist(player)">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="accent" (click)="removeAssist(player)" [disabled]="!player.assists">
+                            <mat-icon>remove</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Rojas">
+            <div class="players-list red-cards-list">
+                <div class="player" *ngFor="let player of allPlayers">
+                    <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
+                    <div class="player-amount">
+                        <span *ngIf="player.redCard">1</span>
+                    </div>
+                    <div class="player-buttons">
+                        <button mat-mini-fab color="primary" *ngIf="!player.redCard" (click)="changeRedCard(player)">
+                            <mat-icon>check</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="accent" *ngIf="player.redCard" (click)="changeRedCard(player)">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
     </mat-tab-group>
 
 </div>

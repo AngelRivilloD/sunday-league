@@ -1,5 +1,17 @@
 <div class="player" *ngIf="player">
+    <div class="player-red-card" *ngIf="player.redCard"></div>
+    <div class="player-assists" *ngIf="player.assists">
+        <img src="../../../assets/assists2.jpg" alt="">
+        <div class="player-assists-text" *ngIf="player.assists > 1">{{player.assists}}</div>
+    </div>
+    <div class="player-goals" *ngIf="player.goals">
+
+        <img src="../../../assets/football.png" alt="">
+        <div class="player-goals-text" *ngIf="player.goals > 1">{{player.goals}}</div>
+    </div>
+    <mat-icon class="player-mvp" *ngIf="player.mvp">star</mat-icon>
     <img class="player-img" [src]="player.photo" alt="">
+
     <div class="player-captain" *ngIf="player.captain">C</div>
     <div class="player-text">
         <div class="player-number">{{player.number}}</div>
