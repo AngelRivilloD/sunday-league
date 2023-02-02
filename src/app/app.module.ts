@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { PitchComponent } from './pitch/pitch.component';
 import { PitchPlayerComponent } from './pitch/pitch-player/pitch-player.component';
 import { HighlightsComponent } from './highlights/highlights.component';
+import { ConvocatoriaComponent } from './convocatoria/convocatoria.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HighlightsComponent } from './highlights/highlights.component';
     LineupComponent,
     PitchComponent,
     PitchPlayerComponent,
-    HighlightsComponent
+    HighlightsComponent,
+    ConvocatoriaComponent
   ],
   imports: [
     BrowserModule,

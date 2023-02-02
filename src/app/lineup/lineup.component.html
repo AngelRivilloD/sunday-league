@@ -5,30 +5,37 @@
       <mat-icon class="refresh-icon" (click)="refresh()" fontIcon="refresh"></mat-icon>
     </div>
 
+    <div class="player-container-body">
+      <h4 *ngIf="goalkeepers.length > 0">Goalkeepers</h4>
+      <div class="player" *ngFor="let item of goalkeepers">
+        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
+        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      </div>
 
-    <h4 *ngIf="goalkeepers.length > 0">Goalkeepers</h4>
-    <div class="player" *ngFor="let item of goalkeepers">
-      <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-      <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      <h4 *ngIf="defenses.length > 0">Defenses</h4>
+      <div class="player" *ngFor="let item of defenses">
+        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
+        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      </div>
+
+      <h4 *ngIf="midfielders.length > 0">Midfielders</h4>
+      <div class="player" *ngFor="let item of midfielders">
+        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
+        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      </div>
+
+      <h4 *ngIf="attackers.length > 0">Attackers</h4>
+      <div class="player" *ngFor="let item of attackers">
+        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
+        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      </div>
+    </div>
+    <div class="player-container-footer">
+      <button class="player-container-footer-button" (click)="toConvocatoria()" mat-raised-button>
+        <mat-icon fontIcon="list">list</mat-icon>
+        CONVOCATORIA</button>
     </div>
 
-    <h4 *ngIf="defenses.length > 0">Defenses</h4>
-    <div class="player" *ngFor="let item of defenses">
-      <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-      <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
-    </div>
-
-    <h4 *ngIf="midfielders.length > 0">Midfielders</h4>
-    <div class="player" *ngFor="let item of midfielders">
-      <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-      <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
-    </div>
-
-    <h4 *ngIf="attackers.length > 0">Attackers</h4>
-    <div class="player" *ngFor="let item of attackers">
-      <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-      <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
-    </div>
 
   </div>
 

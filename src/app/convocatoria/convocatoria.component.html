@@ -1,0 +1,50 @@
+<div class="convocatoria-wrapper">
+    <div class="players-row" style="margin-left: 75%;">
+        <div class="players-row-title">
+            <h3>Arqueros</h3>
+        </div>
+        <div class="players">
+            <div class="player" *ngFor="let player of goalkeepers">
+                <img class="player-img" [src]="player.photo" alt="">
+                <div class="player-number">{{player.number}}</div><br>
+                <div class="player-name">{{player.lastName}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="players-row">
+        <div class="players-row-title">
+            <h3>Defensas</h3>
+        </div>
+        <div class="players">
+            <div class="player" *ngFor="let player of defenders">
+                <img class="player-img" [src]="player.photo" alt="">
+                <div class="player-number">{{player.number}}</div><br>
+                <div class="player-name">{{player.lastName}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="players-row">
+        <div class="players-row-title">
+            <h3>Medios</h3>
+        </div>
+        <div class="players">
+            <div class="player" *ngFor="let player of midfielders">
+                <img class="player-img" [src]="player.photo" alt="">
+                <div class="player-number">{{player.number}}</div><br>
+                <div class="player-name">{{player.lastName}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="players-row">
+        <div class="players-row-title">
+            <h3>Delanteros</h3>
+        </div>
+        <div class="players">
+            <div class="player" *ngFor="let player of attackers">
+                <img class="player-img" [src]="player.photo" alt="">
+                <div class="player-number">{{player.number}}</div><br>
+                <div class="player-name">{{player.lastName}}</div>
+            </div>
+        </div>
+    </div>
+</div>

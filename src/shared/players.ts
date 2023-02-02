@@ -170,8 +170,8 @@ export const playersData: Player[] = [
         "position": "DEL"
     },
     {
-        "firstName": "Grauly",
-        "lastName": "Luis",
+        "firstName": "Luis",
+        "lastName": "Grauly",
         "nickName": "",
         "photo": "../../../assets/Grauly.jpeg",
         "number": 11,

@@ -8,6 +8,7 @@ export class StorageService {
 
   private _lineup: Player[] = [];
   private _bench: Player[] = [];
+  private _players: Player[] = [];
 
   constructor() { }
 
@@ -25,5 +26,13 @@ export class StorageService {
 
   get bench(): Player[] {
     return this._bench || [];
+  }
+
+  set players(players: Player[]) {
+    this._players = players;
+  }
+
+  get players(): Player[] {
+    return this._players || [];
   }
 }

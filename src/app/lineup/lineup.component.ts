@@ -3,6 +3,7 @@ import { playersData } from "../../shared/players";
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Player } from "../../shared/player";
 import { StorageService } from 'src/services/storage.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class LineupComponent implements OnInit {
 
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
 
-  constructor(private _storageService: StorageService) { }
+  constructor(private _storageService: StorageService, private _router: Router) { }
 
   ngOnInit(): void {
     this.allPlayers = JSON.parse(JSON.stringify(playersData));
@@ -77,6 +78,13 @@ export class LineupComponent implements OnInit {
     this._storageService.bench = this.players;
     console.log(this.lineUp);
     console.log(this.players);
+  }
+
+  toConvocatoria() {
+    this._storageService.players = this.players;
+    console.log(this.players);
+
+    this._router.navigateByUrl('/convocatoria');
   }
 
   drop(event: CdkDragDrop<Player[]>) {
