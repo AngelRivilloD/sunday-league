@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HighlightsComponent } from './highlights/highlights.component';
 import { LineupComponent } from './lineup/lineup.component';
+import { PitchComponent } from './pitch/pitch.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'highlights',
     component: HighlightsComponent
+  },
+  {
+    path: 'pitch',
+    component: PitchComponent
   }
 ];
 
