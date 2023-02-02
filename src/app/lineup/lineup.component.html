@@ -30,11 +30,11 @@
         <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
       </div>
     </div>
-    <div class="player-container-footer">
+    <!-- <div class="player-container-footer">
       <button class="player-container-footer-button" (click)="toConvocatoria()" mat-raised-button>
         <mat-icon fontIcon="list">list</mat-icon>
         CONVOCATORIA</button>
-    </div>
+    </div> -->
 
 
   </div>
@@ -60,10 +60,12 @@
         <mat-icon (click)="removePlayer(item)" fontIcon="close"></mat-icon>
       </div>
     </div>
-    <button class="done-button" [routerLink]="['/pitch']" (click)="printLineup()" mat-raised-button>
+    <button class="done-button" color="primary" [routerLink]="['/pitch']" [disabled]="lineUp.length < 11"
+      (click)="goToLineup()" mat-raised-button>
       <mat-icon fontIcon="people">people</mat-icon>
       ALINEACION</button>
-    <button class="done-button" [routerLink]="['/highlights']" (click)="printLineup()" mat-raised-button>
+    <button class="done-button" color="primary" [routerLink]="['/highlights']" [disabled]="lineUp.length < 11"
+      (click)="goToHighlights()" mat-raised-button>
       <mat-icon fontIcon="poll">poll</mat-icon>
       HIGHLIGHTS</button>
   </div>

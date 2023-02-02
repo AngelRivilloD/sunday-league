@@ -9,6 +9,7 @@ export class StorageService {
   private _lineup: Player[] = [];
   private _bench: Player[] = [];
   private _players: Player[] = [];
+  private _lineUpMode: boolean;
 
   constructor() { }
 
@@ -34,5 +35,13 @@ export class StorageService {
 
   get players(): Player[] {
     return this._players || [];
+  }
+
+  set lineUpMode(mode: boolean) {
+    this._lineUpMode = mode;
+  }
+
+  get lineUpMode(): boolean {
+    return this._lineUpMode || false;
   }
 }
