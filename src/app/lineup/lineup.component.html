@@ -60,12 +60,12 @@
         <mat-icon (click)="removePlayer(item)" fontIcon="close"></mat-icon>
       </div>
     </div>
-    <button class="done-button" color="primary" [routerLink]="['/pitch']" (click)="goToLineup()"
-      [disabled]="lineUp.length < 11" mat-raised-button>
+    <button class="done-button" color="primary" [routerLink]="['/pitch']" [disabled]="lineUp.length < 11"
+      (click)="goToLineup()" mat-raised-button>
       <mat-icon fontIcon="people">people</mat-icon>
       ALINEACION</button>
-    <button class="done-button" color="primary" [routerLink]="['/highlights']" (click)="goToHighlights()"
-      [disabled]="lineUp.length < 11" mat-raised-button>
+    <button class="done-button" color="primary" [routerLink]="['/highlights']" [disabled]="lineUp.length < 11"
+      (click)="goToHighlights()" mat-raised-button>
       <mat-icon fontIcon="poll">poll</mat-icon>
       HIGHLIGHTS</button>
   </div>
