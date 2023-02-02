@@ -73,11 +73,16 @@ export class LineupComponent implements OnInit {
     this.goalkeepers = this.players.filter(player => player.position === "POR");
   }
 
-  printLineup() {
+  goToHighlights() {
     this._storageService.lineup = this.lineUp;
     this._storageService.bench = this.players;
-    console.log(this.lineUp);
-    console.log(this.players);
+    this._storageService.lineUpMode = false;
+  }
+
+  goToLineup() {
+    this._storageService.lineup = this.lineUp;
+    this._storageService.bench = this.players;
+    this._storageService.lineUpMode = true;
   }
 
   toConvocatoria() {
