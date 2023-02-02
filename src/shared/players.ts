@@ -5,7 +5,7 @@ export const playersData: Player[] = [
         "firstName": "Gustavo",
         "lastName": "Rojas",
         "nickName": "",
-        "photo": "../../../assets/Gustavo.jpeg",
+        "photo": "../../../assets/Gustavo.jpg",
         "number": 1,
         "position": "POR"
     },
@@ -13,7 +13,7 @@ export const playersData: Player[] = [
         "firstName": "Angel",
         "lastName": "Rivillo",
         "nickName": "",
-        "photo": "../../../assets/Rivi.jpeg",
+        "photo": "../../../assets/Rivi.jpg",
         "number": 16,
         "position": "DEF"
     },
@@ -21,7 +21,7 @@ export const playersData: Player[] = [
         "firstName": "Manuel",
         "lastName": "Cabana",
         "nickName": "",
-        "photo": "../../../assets/Cabana.jpeg",
+        "photo": "../../../assets/Cabana.jpg",
         "number": 4,
         "position": "DEF"
     },
@@ -29,7 +29,7 @@ export const playersData: Player[] = [
         "firstName": "Tonino",
         "lastName": "Cogliano",
         "nickName": "",
-        "photo": "../../../assets/Nino.jpeg",
+        "photo": "../../../assets/Nino.jpg",
         "number": 5,
         "position": "DEF"
     },
@@ -37,7 +37,7 @@ export const playersData: Player[] = [
         "firstName": "Victor",
         "lastName": "Garban",
         "nickName": "",
-        "photo": "../../../assets/Victor.jpeg",
+        "photo": "../../../assets/Victor.jpg",
         "number": 13,
         "position": "DEF"
     },
@@ -45,7 +45,7 @@ export const playersData: Player[] = [
         "firstName": "Nelson",
         "lastName": "Ferreira",
         "nickName": "",
-        "photo": "../../../assets/Archie.jpeg",
+        "photo": "../../../assets/Archie.jpg",
         "number": 15,
         "position": "DEF"
     },
@@ -53,7 +53,7 @@ export const playersData: Player[] = [
         "firstName": "Ronny",
         "lastName": "De Abreu",
         "nickName": "",
-        "photo": "../../../assets/Ronny.jpeg",
+        "photo": "../../../assets/Ronny.jpg",
         "number": 19,
         "position": "DEF"
     },
@@ -61,7 +61,7 @@ export const playersData: Player[] = [
         "firstName": "Raul",
         "lastName": "Goncalves",
         "nickName": "",
-        "photo": "../../../assets/Raul.jpeg",
+        "photo": "../../../assets/Raul.jpg",
         "number": 28,
         "position": "DEF"
     },
@@ -69,7 +69,7 @@ export const playersData: Player[] = [
         "firstName": "Daniel",
         "lastName": "Hernández",
         "nickName": "",
-        "photo": "../../../assets/Daniel.jpeg",
+        "photo": "../../../assets/Daniel.jpg",
         "number": 79,
         "position": "DEF"
     },
@@ -77,7 +77,7 @@ export const playersData: Player[] = [
         "firstName": "Gonzalo",
         "lastName": "Casal",
         "nickName": "",
-        "photo": "../../../assets/Gonzo.jpeg",
+        "photo": "../../../assets/Gonzo.jpg",
         "number": 2,
         "position": "MED"
     },
@@ -85,7 +85,7 @@ export const playersData: Player[] = [
         "firstName": "Gabriel",
         "lastName": "Di Salvo",
         "nickName": "",
-        "photo": "../../../assets/Gabo.jpeg",
+        "photo": "../../../assets/Gabo.jpg",
         "number": 8,
         "position": "MED"
     },
@@ -93,7 +93,7 @@ export const playersData: Player[] = [
         "firstName": "Luis Miguel",
         "lastName": "García",
         "nickName": "",
-        "photo": "../../../assets/Luismi.jpeg",
+        "photo": "../../../assets/Luismi.jpg",
         "number": 14,
         "position": "MED"
     },
@@ -101,7 +101,7 @@ export const playersData: Player[] = [
         "firstName": "Angel",
         "lastName": "Rodriguez",
         "nickName": "",
-        "photo": "../../../assets/Angel.jpeg",
+        "photo": "../../../assets/Angel.jpg",
         "number": 22,
         "position": "MED"
     },
@@ -109,7 +109,7 @@ export const playersData: Player[] = [
         "firstName": "Geanluca",
         "lastName": "Medaglia",
         "nickName": "",
-        "photo": "../../../assets/Luca.jpeg",
+        "photo": "../../../assets/Luca.jpg",
         "number": 23,
         "position": "MED"
     },
@@ -117,7 +117,7 @@ export const playersData: Player[] = [
         "firstName": "Giancarlo",
         "lastName": "Santoro",
         "nickName": "",
-        "photo": "../../../assets/Santoro.jpeg",
+        "photo": "../../../assets/Santoro.jpg",
         "number": 20,
         "position": "MED"
     },
@@ -125,7 +125,7 @@ export const playersData: Player[] = [
         "firstName": "Richard",
         "lastName": "Aleixo",
         "nickName": "",
-        "photo": "../../../assets/Richard.jpeg",
+        "photo": "../../../assets/Richard.jpg",
         "number": 6,
         "position": "MED"
     },
@@ -133,7 +133,7 @@ export const playersData: Player[] = [
         "firstName": "Antonio",
         "lastName": "Di Benedetto",
         "nickName": "",
-        "photo": "../../../assets/Antony.jpeg",
+        "photo": "../../../assets/Antony.jpg",
         "number": 3,
         "position": "MED"
     },
@@ -141,7 +141,7 @@ export const playersData: Player[] = [
         "firstName": "Gian",
         "lastName": "Di Salvo",
         "nickName": "",
-        "photo": "../../../assets/Chipi.jpeg",
+        "photo": "../../../assets/Chipi.jpg",
         "number": 7,
         "position": "MED"
     },
@@ -149,7 +149,7 @@ export const playersData: Player[] = [
         "firstName": "Ricardo",
         "lastName": "Cogliano",
         "nickName": "",
-        "photo": "../../../assets/KKto.jpeg",
+        "photo": "../../../assets/KKto.jpg",
         "number": 17,
         "position": "DEL"
     },
@@ -157,7 +157,7 @@ export const playersData: Player[] = [
         "firstName": "Samuel",
         "lastName": "Añez",
         "nickName": "",
-        "photo": "../../../assets/Samuel.jpeg",
+        "photo": "../../../assets/Samuel.jpg",
         "number": 18,
         "position": "DEL"
     },
@@ -165,7 +165,7 @@ export const playersData: Player[] = [
         "firstName": "Alejandro",
         "lastName": "Petruzzella",
         "nickName": "",
-        "photo": "../../../assets/Petru.jpeg",
+        "photo": "../../../assets/Petru.jpg",
         "number": 91,
         "position": "DEL"
     },
@@ -173,7 +173,7 @@ export const playersData: Player[] = [
         "firstName": "Luis",
         "lastName": "Grauly",
         "nickName": "",
-        "photo": "../../../assets/Grauly.jpeg",
+        "photo": "../../../assets/Grauly.jpg",
         "number": 11,
         "position": "DEL"
     },
@@ -181,7 +181,7 @@ export const playersData: Player[] = [
         "firstName": "Elio",
         "lastName": "Rodriguez",
         "nickName": "",
-        "photo": "../../../assets/Elio.jpeg",
+        "photo": "../../../assets/Elio.jpg",
         "number": 9,
         "position": "DEL"
     }
