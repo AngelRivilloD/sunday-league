@@ -6,28 +6,37 @@
     </div>
 
     <div class="player-container-body">
-      <h4 *ngIf="goalkeepers.length > 0">Goalkeepers</h4>
-      <div class="player" *ngFor="let item of goalkeepers">
-        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
-      </div>
-
-      <h4 *ngIf="defenses.length > 0">Defenses</h4>
-      <div class="player" *ngFor="let item of defenses">
-        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      <h4 *ngIf="goalkeepersAndDefenders.length > 0">Goalkeeper / Defenders</h4>
+      <div class="players">
+        <div class="player" (click)="playerSelected(player)" *ngFor="let player of goalkeepersAndDefenders">
+          <div *ngIf="lineUp.length > 10" (click)="removeFromBench(player)" class="remove-button">
+            <mat-icon fontIcon="close"></mat-icon>
+          </div>
+          <img class="player-img" [src]="player.photo" alt=""><br>
+          <div class="player-name">{{player.nickName || player.lastName}}</div>
+        </div>
       </div>
 
       <h4 *ngIf="midfielders.length > 0">Midfielders</h4>
-      <div class="player" *ngFor="let item of midfielders">
-        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      <div class="players">
+        <div class="player" (click)="playerSelected(player)" *ngFor="let player of midfielders">
+          <div *ngIf="lineUp.length > 10" (click)="removeFromBench(player)" class="remove-button">
+            <mat-icon fontIcon="close"></mat-icon>
+          </div>
+          <img class="player-img" [src]="player.photo" alt=""><br>
+          <div class="player-name">{{player.nickName || player.lastName}}</div>
+        </div>
       </div>
 
       <h4 *ngIf="attackers.length > 0">Attackers</h4>
-      <div class="player" *ngFor="let item of attackers">
-        <div class="player-name" (click)="playerSelected(item)">{{item.firstName}} {{item.lastName}}</div>
-        <mat-icon (click)="removeFromBench(item)" fontIcon="close"></mat-icon>
+      <div class="players">
+        <div class="player" (click)="playerSelected(player)" *ngFor="let player of attackers">
+          <div *ngIf="lineUp.length > 10" (click)="removeFromBench(player)" class="remove-button">
+            <mat-icon fontIcon="close"></mat-icon>
+          </div>
+          <img class="player-img" [src]="player.photo" alt=""><br>
+          <div class="player-name">{{player.nickName || player.lastName}}</div>
+        </div>
       </div>
     </div>
     <!-- <div class="player-container-footer">
@@ -56,7 +65,8 @@
 
     <div cdkDropList [cdkDropListData]="lineUp" class="lineup-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of lineUp" cdkDrag>
-        <div class="lineup-list-name">{{item.firstName}} {{item.lastName}}</div>
+        <img class="lineup-list-img" [src]="item.photo">
+        <div class="lineup-list-name">{{item.nickName || item.lastName}}</div>
         <mat-icon (click)="removePlayer(item)" fontIcon="close"></mat-icon>
       </div>
     </div>
