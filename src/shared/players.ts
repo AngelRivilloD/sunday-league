@@ -4,7 +4,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Gustavo",
         "lastName": "Rojas",
-        "nickName": "",
+        "nickName": "Gustavo",
         "photo": "../../../assets/Gustavo.jpg",
         "number": 1,
         "position": "POR"
@@ -12,7 +12,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Angel",
         "lastName": "Rivillo",
-        "nickName": "",
+        "nickName": "Rivi",
         "photo": "../../../assets/Rivi.jpg",
         "number": 16,
         "position": "DEF"
@@ -28,7 +28,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Tonino",
         "lastName": "Cogliano",
-        "nickName": "",
+        "nickName": "Nino",
         "photo": "../../../assets/Nino.jpg",
         "number": 5,
         "position": "DEF"
@@ -36,7 +36,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Victor",
         "lastName": "Garban",
-        "nickName": "",
+        "nickName": "Victor",
         "photo": "../../../assets/Victor.jpg",
         "number": 13,
         "position": "DEF"
@@ -44,7 +44,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Nelson",
         "lastName": "Ferreira",
-        "nickName": "",
+        "nickName": "Archie",
         "photo": "../../../assets/Archie.jpg",
         "number": 15,
         "position": "DEF"
@@ -52,7 +52,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Ronny",
         "lastName": "De Abreu",
-        "nickName": "",
+        "nickName": "Ronny",
         "photo": "../../../assets/Ronny.jpg",
         "number": 19,
         "position": "DEF"
@@ -60,7 +60,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Raul",
         "lastName": "Goncalves",
-        "nickName": "",
+        "nickName": "Raul",
         "photo": "../../../assets/Raul.jpg",
         "number": 28,
         "position": "DEF"
@@ -68,7 +68,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Daniel",
         "lastName": "Hernández",
-        "nickName": "",
+        "nickName": "Daniel",
         "photo": "../../../assets/Daniel.jpg",
         "number": 79,
         "position": "DEF"
@@ -76,7 +76,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Gonzalo",
         "lastName": "Casal",
-        "nickName": "",
+        "nickName": "Gonzo",
         "photo": "../../../assets/Gonzo.jpg",
         "number": 2,
         "position": "MED"
@@ -84,7 +84,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Gabriel",
         "lastName": "Di Salvo",
-        "nickName": "",
+        "nickName": "Gabo",
         "photo": "../../../assets/Gabo.jpg",
         "number": 8,
         "position": "MED"
@@ -92,7 +92,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Luis Miguel",
         "lastName": "García",
-        "nickName": "",
+        "nickName": "Luismi",
         "photo": "../../../assets/Luismi.jpg",
         "number": 14,
         "position": "MED"
@@ -100,7 +100,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Angel",
         "lastName": "Rodriguez",
-        "nickName": "",
+        "nickName": "Angel",
         "photo": "../../../assets/Angel.jpg",
         "number": 22,
         "position": "MED"
@@ -108,7 +108,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Geanluca",
         "lastName": "Medaglia",
-        "nickName": "",
+        "nickName": "Luca",
         "photo": "../../../assets/Luca.jpg",
         "number": 23,
         "position": "MED"
@@ -132,7 +132,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Antonio",
         "lastName": "Di Benedetto",
-        "nickName": "",
+        "nickName": "Antony",
         "photo": "../../../assets/Antony.jpg",
         "number": 3,
         "position": "MED"
@@ -140,7 +140,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Gian",
         "lastName": "Di Salvo",
-        "nickName": "",
+        "nickName": "Chipi",
         "photo": "../../../assets/Chipi.jpg",
         "number": 7,
         "position": "MED"
@@ -148,7 +148,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Ricardo",
         "lastName": "Cogliano",
-        "nickName": "",
+        "nickName": "Kkto",
         "photo": "../../../assets/KKto.jpg",
         "number": 17,
         "position": "DEL"
@@ -156,7 +156,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Samuel",
         "lastName": "Añez",
-        "nickName": "",
+        "nickName": "Samu",
         "photo": "../../../assets/Samuel.jpg",
         "number": 18,
         "position": "DEL"
@@ -164,7 +164,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Alejandro",
         "lastName": "Petruzzella",
-        "nickName": "",
+        "nickName": "Petru",
         "photo": "../../../assets/Petru.jpg",
         "number": 91,
         "position": "DEL"
@@ -172,7 +172,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Luis",
         "lastName": "Grauly",
-        "nickName": "",
+        "nickName": "Grauly",
         "photo": "../../../assets/Grauly.jpg",
         "number": 11,
         "position": "DEL"
@@ -180,7 +180,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Elio",
         "lastName": "Rodriguez",
-        "nickName": "",
+        "nickName": "Elio",
         "photo": "../../../assets/Elio.jpg",
         "number": 9,
         "position": "DEL"

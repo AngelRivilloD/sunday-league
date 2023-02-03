@@ -15,10 +15,9 @@ export class LineupComponent implements OnInit {
 
   public allPlayers: Player[] = [];
   public players: Player[] = [];
-  public defenses: Player[] = [];
+  public goalkeepersAndDefenders: Player[] = [];
   public midfielders: Player[] = [];
   public attackers: Player[] = [];
-  public goalkeepers: Player[] = [];
   public lineUp: Player[] = [];
 
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
@@ -29,9 +28,6 @@ export class LineupComponent implements OnInit {
     this.allPlayers = JSON.parse(JSON.stringify(playersData));
     this.players = playersData;
     this._fillPositions();
-    console.log(this.defenses);
-
-    console.log(this.players);
   }
 
   refresh() {
@@ -67,10 +63,9 @@ export class LineupComponent implements OnInit {
   }
 
   _fillPositions() {
-    this.defenses = this.players.filter(player => player.position === "DEF");
+    this.goalkeepersAndDefenders = this.players.filter(player => player.position === "POR" || player.position === "DEF");
     this.midfielders = this.players.filter(player => player.position === "MED");
     this.attackers = this.players.filter(player => player.position === "DEL");
-    this.goalkeepers = this.players.filter(player => player.position === "POR");
   }
 
   goToHighlights() {
