@@ -1,10 +1,12 @@
+.toogle-segment {
+    text-align: right;
+    padding: 10px;
+    background-color: #b1b1b1;
+}
+
 .pitch-wrapper {
 
-    .toogle-segment {
-        text-align: right;
-        padding: 10px;
-        background-color: #b1b1b1;
-    }
+
 
     .pitch-img {
         width: 100%;
@@ -12,9 +14,11 @@
 
     .lineup {
         padding: 20px;
-        background: #1e1e1e;
-        height: 100%;
-        margin-top: -484px;
+        padding-top: 70px;
+        height: 430px;
+        background-image: url(/../assets/pitchblack2.png);
+        background-size: cover;
+        background-position: center;
 
         &-row {
             margin-top: 18px;
@@ -41,7 +45,6 @@
     }
 
     .bench {
-        margin-top: 9px;
         padding: 16px;
 
         .full-width {
@@ -156,185 +159,143 @@
         }
     }
 
+    .side-bench {
+        margin-top: 9px;
+        padding: 12px;
+        padding-right: 0px;
+
+        .full-width {
+            width: 100%;
+        }
+
+        h4 {
+            color: grey;
+            margin-bottom: 8px;
+        }
+
+        &-players {
+            float: left;
+            width: 80%;
+        }
+
+        &-player {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            float: left;
+            color: white;
+            padding-bottom: 8px;
+
+            &-red-card {
+                background-color: #d32626;
+                height: 14px;
+                width: 10px;
+                position: absolute;
+                margin-left: -5px;
+                margin-top: -4px;
+            }
+
+            &-mvp {
+                position: absolute;
+                margin-left: -12px;
+                margin-top: 9px;
+                font-size: 18px;
+                color: #ffc800;
+            }
+
+            &-goals {
+                margin-top: 4px;
+                margin-left: 4px;
+                color: #efefef;
+                font-weight: 500;
+                display: flex;
+                justify-content: start;
+
+                &-text {
+                    margin-left: 2px;
+                    font-size: 10px;
+                }
+
+                img {
+                    height: 12px;
+                    border-radius: 12px;
+                }
+            }
+
+            &-assists {
+                margin-top: 4px;
+                margin-left: 4px;
+                color: #efefef;
+                font-weight: 500;
+                display: flex;
+                justify-content: start;
+
+                &-text {
+                    margin-left: 2px;
+                    font-size: 10px;
+                }
+
+                img {
+                    height: 12px;
+                    border-radius: 12px;
+                }
+            }
+
+            &-text {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+            }
+
+            &-img {
+                height: 20px;
+                border-radius: 25px;
+            }
+
+            &-number {
+                font-weight: 500;
+                margin-right: 5px;
+                margin-left: 5px;
+                color: grey;
+            }
+
+            &-name {
+                width: 100%;
+                font-size: 12px;
+            }
+        }
+
+        .dt {
+            width: 20%;
+            float: left;
+            color: white;
+
+            &-text {
+                font-size: 12px;
+            }
+
+            &-img {
+                height: 35px;
+                border-radius: 35px;
+            }
+        }
+    }
+
 }
 
 .small-mode {
+    display: flex;
+
+    .pitch-img {
+        width: 70%;
+    }
+
     .lineup {
-        margin-top: -400px;
+        width: calc(70% - 40px);
+        height: 300px;
 
         .lineup-row {
-            margin-top: 4px;
+            margin-top: 8px;
         }
     }
-}
-
-.pitch-field {
-    .container {
-        width: 850px;
-        height: 550px;
-        margin: 50px auto;
-        background-color: #1e1e1e;
-        position: relative;
-
-        .line {
-            width: 850px;
-            height: 550px;
-            border: 3px solid #6a6a6a;
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            top: 0px;
-            bottom: 0px;
-
-            &::before {
-                border: 2px solid #1e1e1e;
-                bottom: -6px;
-                content: "";
-                left: -9px;
-                position: absolute;
-                right: -6px;
-                top: -9px;
-            }
-        }
-
-        .half {
-            width: 425px;
-            height: 550px;
-            position: absolute;
-            top: 0px;
-            border-right-color: #6a6a6a;
-            border-right-style: solid;
-            border-right-width: 4px;
-            left: 0px;
-            z-index: 200;
-        }
-
-        .panelty {
-            width: 110px;
-            height: 220px;
-            border: 3px solid #6a6a6a;
-            position: absolute;
-            z-index: 220;
-            background-color: #1e1e1e;
-
-            &.left {
-                left: 3px;
-                top: 150px;
-                border-left-color: transparent;
-                border-left-width: 0px;
-
-                &::after {
-                    border: 3px solid #6a6a6a;
-                    border-left-color: transparent;
-                    border-left-width: 0px;
-                    bottom: 45px;
-                    content: "";
-                    left: 0px;
-                    position: absolute;
-                    right: 55px;
-                    top: 45px;
-                }
-            }
-
-            &.right {
-                right: -3px;
-                top: 150px;
-                border-right-color: transparent;
-                border-right-width: 0px;
-
-                &::after {
-                    border: 3px solid #6a6a6a;
-                    border-right-color: transparent;
-                    border-right-width: 0px;
-                    bottom: 45px;
-                    content: "";
-                    left: 55px;
-                    position: absolute;
-                    right: 0px;
-                    top: 45px;
-                }
-            }
-        }
-
-        .p-spot {
-            &.left {
-                &:after {
-                    content: "\2022";
-                    position: absolute;
-                    color: #6a6a6a;
-                    font-size: 35px;
-                    top: 253px;
-                    left: 80px;
-                    z-index: 300;
-                }
-            }
-
-            &.right {
-                &:after {
-                    content: "\2022";
-                    position: absolute;
-                    color: #6a6a6a;
-                    font-size: 35px;
-                    top: 253px;
-                    right: 80px;
-                    z-index: 300;
-                }
-            }
-        }
-
-        .center {
-            position: absolute;
-            width: 130px;
-            height: 130px;
-            border: 3px solid #6a6a6a;
-            left: 359px;
-            top: 193px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-
-            &::after {
-                background-color: #6a6a6a;
-                border: 5px solid #6a6a6a;
-                bottom: 55px;
-                content: "";
-                left: 55px;
-                position: absolute;
-                right: 55px;
-                top: 55px;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                border-radius: 50%;
-            }
-        }
-
-        .p-place {
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            height: 130px;
-            position: absolute;
-            width: 150px;
-            z-index: 210;
-            border: 3px solid transparent;
-
-            &.left {
-                border-bottom-color: #6a6a6a;
-                border-right-color: #6a6a6a;
-                border-top-color: #6a6a6a;
-                left: 0;
-                top: 193px;
-            }
-
-            &.right {
-                border-bottom-color: #6a6a6a;
-                border-left-color: #6a6a6a;
-                border-top-color: #6a6a6a;
-                right: 0px;
-                top: 193px;
-            }
-        }
-    }
-
-
 }

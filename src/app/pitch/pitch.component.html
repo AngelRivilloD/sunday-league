@@ -1,37 +1,47 @@
+<div class="toogle-segment">
+    <mat-slide-toggle class="example-margin" [(ngModel)]="smallMode">
+        Short version
+    </mat-slide-toggle>
+</div>
 <div class="pitch-wrapper" [ngClass]="{'small-mode': smallMode}">
-    <div class="toogle-segment">
-        <mat-slide-toggle class="example-margin" [(ngModel)]="smallMode">
-            Feed mode
-        </mat-slide-toggle>
-    </div>
-    <img class="pitch-img" *ngIf="!smallMode" src="../../assets/pitchblack2.png" alt="">
-    <img class="pitch-img" *ngIf="smallMode" src="../../assets/pitchblack3.png" alt="">
+    <!-- <img class="pitch-img" *ngIf="!smallMode" src="../../assets/pitchblack2.png" alt="">
+    <img class="pitch-img" *ngIf="smallMode" src="../../assets/pitchblack2.png" alt=""> -->
     <div class="lineup">
         <div class="lineup-row attacker">
-            <pitch-player [player]="lineUp[10]" (click)="selectCaptain(lineUp[10])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[10]"
+                (click)="selectCaptain(lineUp[10])"></pitch-player>
         </div>
         <div class="lineup-row midfielders">
-            <pitch-player [player]="lineUp[8]" (click)="selectCaptain(lineUp[8])"></pitch-player>
-            <pitch-player [player]="lineUp[9]" (click)="selectCaptain(lineUp[9])"></pitch-player>
-            <pitch-player [player]="lineUp[7]" (click)="selectCaptain(lineUp[7])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[8]"
+                (click)="selectCaptain(lineUp[8])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[9]"
+                (click)="selectCaptain(lineUp[9])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[7]"
+                (click)="selectCaptain(lineUp[7])"></pitch-player>
         </div>
         <div class="lineup-row center">
-            <pitch-player [player]="lineUp[6]" (click)="selectCaptain(lineUp[6])"></pitch-player>
-            <pitch-player [player]="lineUp[5]" (click)="selectCaptain(lineUp[5])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[6]"
+                (click)="selectCaptain(lineUp[6])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[5]"
+                (click)="selectCaptain(lineUp[5])"></pitch-player>
         </div>
 
         <div class="lineup-row defenders">
-            <pitch-player [player]="lineUp[4]" (click)="selectCaptain(lineUp[4])"></pitch-player>
-            <pitch-player [player]="lineUp[3]" (click)="selectCaptain(lineUp[3])"></pitch-player>
-            <pitch-player [player]="lineUp[2]" (click)="selectCaptain(lineUp[2])"></pitch-player>
-            <pitch-player [player]="lineUp[1]" (click)="selectCaptain(lineUp[1])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[4]"
+                (click)="selectCaptain(lineUp[4])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[3]"
+                (click)="selectCaptain(lineUp[3])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[2]"
+                (click)="selectCaptain(lineUp[2])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[1]"
+                (click)="selectCaptain(lineUp[1])"></pitch-player>
         </div>
         <div class="lineup-row goalkeeper">
-            <pitch-player [player]="lineUp[0]" (click)="selectCaptain(lineUp[0])"></pitch-player>
+            <pitch-player [smallMode]="smallMode" [player]="lineUp[0]"
+                (click)="selectCaptain(lineUp[0])"></pitch-player>
         </div>
     </div>
-    <div class="bench">
-
+    <div class="bench" *ngIf="!smallMode">
         <div class="bench-players" [ngClass]="{'full-width': highLightsMode}">
             <h4 *ngIf="!smallMode">Cambios</h4>
             <div class="bench-player" *ngFor="let player of bench">
@@ -65,6 +75,44 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="side-bench" *ngIf="smallMode">
+        <div class="side-bench-players" [ngClass]="{'full-width': highLightsMode}">
+            <h4 *ngIf="!smallMode">Cambios</h4>
+            <div class="side-bench-player" *ngFor="let player of bench">
+
+                <img class="side-bench-player-img" [src]="player.photo" alt="">
+                <div class="side-bench-player-text">
+                    <div class="side-bench-player-number">{{player.number}}</div>
+
+                </div>
+
+                <div class="side-bench-player-red-card" *ngIf="player.redCard && highLightsMode"></div>
+                <div class="side-bench-player-assists" *ngIf="player.assists && highLightsMode">
+                    <img src="../../../assets/assists2.jpg" alt="">
+                    <div class="side-bench-player-assists-text" *ngIf="player.assists > 1">{{player.assists}}</div>
+                </div>
+                <div class="side-bench-player-goals" *ngIf="player.goals && highLightsMode">
+
+                    <img src="../../../assets/football.png" alt="">
+                    <div class="side-bench-player-goals-text" *ngIf="player.goals > 1">{{player.goals}}</div>
+                </div>
+                <div class="side-bench-player-name">
+                    {{player.lastName}}
+                </div>
+                <mat-icon class="side-bench-player-mvp" *ngIf="player.mvp && highLightsMode">star</mat-icon>
+            </div>
+        </div>
+
+        <div class="dt" *ngIf="!highLightsMode">
+            <h4>DT</h4>
+            <div align="center">
+                <img class="dt-img" src="../../assets/Antony.jpg" alt="">
+                <div class="dt-text">
+                    Antonio <br> Di Benedetto
+                </div>
+            </div>
+        </div>
     </div>
 </div>

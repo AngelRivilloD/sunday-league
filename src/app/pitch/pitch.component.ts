@@ -54,7 +54,7 @@ export class PitchComponent implements OnInit {
       "photo": "../../../assets/Victor.jpg",
       "number": 13,
       "position": "DEF",
-      "assists": 1
+      "assists": 2
     },
     {
       "firstName": "Angel",
@@ -72,7 +72,8 @@ export class PitchComponent implements OnInit {
       "photo": "../../../assets/Luca.jpg",
       "number": 23,
       "position": "MED",
-      "goals": 1
+      "goals": 2,
+      "assists": 2
     },
     {
       "firstName": "Richard",
@@ -118,7 +119,7 @@ export class PitchComponent implements OnInit {
       "photo": "../../../assets/Victor.jpg",
       "number": 13,
       "position": "DEF",
-      "assists": 1
+      "assists": 2
     },
     {
       "firstName": "Angel",
@@ -127,7 +128,7 @@ export class PitchComponent implements OnInit {
       "photo": "../../../assets/Angel.jpg",
       "number": 22,
       "position": "MED",
-      "assists": 1
+      "assists": 3
     },
     {
       "firstName": "Geanluca",
@@ -136,7 +137,8 @@ export class PitchComponent implements OnInit {
       "photo": "../../../assets/Luca.jpg",
       "number": 23,
       "position": "MED",
-      "goals": 1
+      "goals": 3,
+      "assists": 3
     },
     {
       "firstName": "Richard",
@@ -152,7 +154,10 @@ export class PitchComponent implements OnInit {
       "nickName": "Antony",
       "photo": "../../../assets/Antony.jpg",
       "number": 3,
-      "position": "MED"
+      "position": "MED",
+      "redCard": true,
+      "goals": 3,
+      "assists": 3
     },
     {
       "firstName": "Samuel",

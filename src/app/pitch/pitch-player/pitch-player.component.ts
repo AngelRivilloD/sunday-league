@@ -9,6 +9,7 @@ import { Player } from 'src/shared/player';
 export class PitchPlayerComponent implements OnInit {
 
   @Input() player: Player;
+  @Input() smallMode: boolean = false;
 
   constructor() {
   }

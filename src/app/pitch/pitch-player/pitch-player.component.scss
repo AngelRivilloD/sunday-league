@@ -99,3 +99,50 @@
         color: #b9b9b9;
     }
 }
+
+.small-mode {
+    .player {
+        width: 60px;
+
+        &-red-card {
+            margin-left: 8px;
+        }
+
+        &-assists {
+            margin-left: 42px;
+
+            &-text {
+                font-size: 11px;
+            }
+
+            img {
+                height: 12px;
+            }
+        }
+
+        &-goals {
+            margin-left: 42px;
+
+            &-text {
+                font-size: 11px;
+            }
+
+            img {
+                height: 12px;
+            }
+        }
+
+        &-name {
+            font-size: 12px;
+        }
+
+        &-number {
+            font-size: 12px;
+        }
+
+        &-img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
