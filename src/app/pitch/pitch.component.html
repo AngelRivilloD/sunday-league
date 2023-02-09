@@ -1,17 +1,9 @@
-<div class="pitch-wrapper">
-    <!-- <div class="pitch-field">
-        <div class="container">
-            <div class="line"></div>
-            <div class="half"></div>
-            <div class="panelty left"></div>
-            <div class="panelty right"></div>
-            <div class="p-spot left">&nbsp;</div>
-            <div class="p-spot right">&nbsp;</div>
-            <div class="center"></div>
-            <div class="p-place left"></div>
-            <div class="p-place right"></div>
-        </div>
-    </div> -->
+<div class="pitch-wrapper" [ngClass]="{'small-mode': smallMode}">
+    <div class="toogle-segment">
+        <mat-slide-toggle class="example-margin" [(ngModel)]="smallMode">
+            Feed mode
+        </mat-slide-toggle>
+    </div>
     <img class="pitch-img" src="../../assets/pitchblack2.png" alt="">
     <div class="lineup">
         <div class="lineup-row attacker">

@@ -1,4 +1,11 @@
 .pitch-wrapper {
+
+    .toogle-segment {
+        text-align: right;
+        padding: 10px;
+        background-color: #b1b1b1;
+    }
+
     .pitch-img {
         width: 100%;
     }
@@ -148,8 +155,16 @@
             }
         }
     }
+
 }
 
+.small-mode {
+    .lineup {
+        .lineup-row {
+            margin-top: 4px;
+        }
+    }
+}
 
 .pitch-field {
     .container {
