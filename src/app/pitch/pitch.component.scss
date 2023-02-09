@@ -184,7 +184,7 @@
             width: 100%;
             float: left;
             color: white;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
 
             &-red-card {
                 background-color: #d32626;
@@ -204,16 +204,17 @@
             }
 
             &-goals {
-                margin-top: 4px;
                 margin-left: 4px;
                 color: #efefef;
                 font-weight: 500;
                 display: flex;
                 justify-content: start;
+                align-items: center;
 
                 &-text {
                     margin-left: 2px;
                     font-size: 10px;
+                    height: 18px;
                 }
 
                 img {
@@ -223,16 +224,17 @@
             }
 
             &-assists {
-                margin-top: 4px;
                 margin-left: 4px;
                 color: #efefef;
                 font-weight: 500;
                 display: flex;
                 justify-content: start;
+                align-items: center;
 
                 &-text {
                     margin-left: 2px;
                     font-size: 10px;
+                    height: 18px;
                 }
 
                 img {
@@ -293,9 +295,15 @@
     .lineup {
         width: calc(70% - 40px);
         height: 300px;
+        padding-bottom: 30px;
+
+        .center {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
 
         .lineup-row {
-            margin-top: 8px;
+            margin-top: 10px;
         }
     }
 }
