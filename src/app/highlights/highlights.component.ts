@@ -43,9 +43,9 @@ export class HighlightsComponent implements OnInit {
   }
 
   print() {
-    console.log(this.allPlayers);
     this._storageService.lineup = this.allPlayers.splice(0, 11);
     this._storageService.bench = this.allPlayers;
+    this._storageService.highlightsMode = true;
   }
 
   select(player: Player) {

@@ -16,6 +16,8 @@ import { PitchComponent } from './pitch/pitch.component';
 import { PitchPlayerComponent } from './pitch/pitch-player/pitch-player.component';
 import { HighlightsComponent } from './highlights/highlights.component';
 import { ConvocatoriaComponent } from './convocatoria/convocatoria.component';
+import { LineupPlayerComponent } from './lineup/lineup-player/lineup-player.component';
+import { FilterByPositionPipe } from 'src/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ConvocatoriaComponent } from './convocatoria/convocatoria.component';
     PitchComponent,
     PitchPlayerComponent,
     HighlightsComponent,
-    ConvocatoriaComponent
+    ConvocatoriaComponent,
+    LineupPlayerComponent,
+    FilterByPositionPipe
   ],
   imports: [
     BrowserModule,

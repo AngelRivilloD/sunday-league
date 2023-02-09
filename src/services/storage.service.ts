@@ -9,7 +9,7 @@ export class StorageService {
   private _lineup: Player[] = [];
   private _bench: Player[] = [];
   private _players: Player[] = [];
-  private _lineUpMode: boolean;
+  private _highlightsMode: boolean = false;
 
   constructor() { }
 
@@ -37,11 +37,11 @@ export class StorageService {
     return this._players || [];
   }
 
-  set lineUpMode(mode: boolean) {
-    this._lineUpMode = mode;
+  set highlightsMode(mode: boolean) {
+    this._highlightsMode = mode;
   }
 
-  get lineUpMode(): boolean {
-    return this._lineUpMode || false;
+  get highlightsMode(): boolean {
+    return this._highlightsMode || false;
   }
 }

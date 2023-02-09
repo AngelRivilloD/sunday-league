@@ -1,0 +1,7 @@
+<div class="player" (click)="select(data)">
+    <div *ngIf="allowDelete" (click)="remove(data)" class="remove-button">
+        <mat-icon fontIcon="close"></mat-icon>
+    </div>
+    <img class="player-img" [src]="data.photo" alt=""><br>
+    <div class="player-name">{{data.nickName || data.lastName}}</div>
+</div>

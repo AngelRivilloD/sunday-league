@@ -13,86 +13,63 @@ import { Router } from '@angular/router';
 })
 export class LineupComponent implements OnInit {
 
-  public allPlayers: Player[] = [];
-  public players: Player[] = [];
-  public goalkeepersAndDefenders: Player[] = [];
-  public midfielders: Player[] = [];
-  public attackers: Player[] = [];
+  public bench: Player[] = [];
   public lineUp: Player[] = [];
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
-
-  constructor(private _storageService: StorageService, private _router: Router) { }
+  constructor(
+    private _storageService: StorageService,
+    private _router: Router) { }
 
   ngOnInit(): void {
-    this.allPlayers = JSON.parse(JSON.stringify(playersData));
-    this.players = playersData;
-    this._fillPositions();
+    this.bench = JSON.parse(JSON.stringify(playersData));
   }
 
   refresh() {
-    this.players = this.allPlayers;
+    this.bench = JSON.parse(JSON.stringify(playersData));
     this.lineUp = [];
-    this._fillPositions();
   }
 
   playerSelected(player: Player) {
-    if (this.lineUp.length > 10) {
-      return;
-    }
-    console.log(player);
-    if (!this.lineUp.includes(player)) {
-      this.lineUp.push(player);
-    }
+    if (this.lineUp.length > 10) { return }
 
-    this.players = this.players.filter(item => { return item !== player });
-    this._fillPositions();
+    this.lineUp.push(player);
+    this.bench = this.bench.filter(item => { return item !== player });
   }
 
-  removePlayer(player: Player) {
+  removeFromLineup(player: Player) {
     this.lineUp = this.lineUp.filter(item => { return item !== player });
-    this.players.push(player);
-    this._fillPositions();
+    this.bench.push(player);
   }
 
   removeFromBench(player: Player) {
-    console.log(player);
-
-    this.players = this.players.filter(item => { return item !== player });
-    this._fillPositions();
-  }
-
-  _fillPositions() {
-    this.goalkeepersAndDefenders = this.players.filter(player => player.position === "POR" || player.position === "DEF");
-    this.midfielders = this.players.filter(player => player.position === "MED");
-    this.attackers = this.players.filter(player => player.position === "DEL");
-  }
-
-  goToHighlights() {
-    this._storageService.lineup = this.lineUp;
-    this._storageService.bench = this.players;
-    this._storageService.lineUpMode = false;
+    this.bench = this.bench.filter(item => { return item !== player });
   }
 
   goToLineup() {
-    this._storageService.lineup = this.lineUp;
-    this._storageService.bench = this.players;
-    this._storageService.lineUpMode = true;
+    this._storePositions();
+    this._storageService.highlightsMode = false;
+    this._router.navigateByUrl('/pitch');
   }
 
-  toConvocatoria() {
-    this._storageService.players = this.players;
-    console.log(this.players);
+  goToHighlights() {
+    this._storePositions();
+    this._router.navigateByUrl('/highlights');
+  }
 
-    this._router.navigateByUrl('/convocatoria');
+  checkPosition(position: string) {
+    const exist = this.bench.some(player => player.position === position);
+    return exist;
+  }
+
+  private _storePositions() {
+    this._storageService.lineup = this.lineUp;
+    this._storageService.bench = this.bench;
   }
 
   drop(event: CdkDragDrop<Player[]>) {
     if (event.previousContainer === event.container) {
-      console.log('moveItemInArray');
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      console.log('transferArrayItem');
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
