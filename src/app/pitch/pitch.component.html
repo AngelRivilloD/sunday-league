@@ -49,7 +49,7 @@
                 <div class="bench-player-text">
                     <div class="bench-player-number">{{player.number}}</div>
                     <div class="bench-player-name">
-                        {{player.lastName}}
+                        {{player.nickName || player.lastName}}
                     </div>
                 </div>
                 <div class="bench-player-red-card" *ngIf="player.redCard && highLightsMode"></div>
@@ -79,14 +79,10 @@
 
     <div class="side-bench" *ngIf="smallMode">
         <div class="side-bench-players" [ngClass]="{'full-width': highLightsMode}">
-            <h4 *ngIf="!smallMode">Cambios</h4>
             <div class="side-bench-player" *ngFor="let player of bench">
 
                 <img class="side-bench-player-img" [src]="player.photo" alt="">
-                <div class="side-bench-player-text">
-                    <div class="side-bench-player-number">{{player.number}}</div>
 
-                </div>
 
                 <div class="side-bench-player-red-card" *ngIf="player.redCard && highLightsMode"></div>
                 <div class="side-bench-player-assists" *ngIf="player.assists && highLightsMode">
@@ -98,16 +94,20 @@
                     <img src="../../../assets/football.png" alt="">
                     <div class="side-bench-player-goals-text" *ngIf="player.goals > 1">{{player.goals}}</div>
                 </div>
-                <div class="side-bench-player-name">
-                    {{player.lastName}}
+                <div class="side-bench-player-text">
+                    <div class="side-bench-player-number">{{player.number}}</div>
+                    <div class="side-bench-player-name">
+                        {{player.nickName || player.lastName}}
+                    </div>
                 </div>
+
                 <mat-icon class="side-bench-player-mvp" *ngIf="player.mvp && highLightsMode">star</mat-icon>
             </div>
         </div>
 
-        <div class="dt" *ngIf="!highLightsMode">
+        <div class="dt">
             <h4>DT</h4>
-            <div align="center">
+            <div class="dt-content">
                 <img class="dt-img" src="../../assets/Antony.jpg" alt="">
                 <div class="dt-text">
                     Antonio <br> Di Benedetto

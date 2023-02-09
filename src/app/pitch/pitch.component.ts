@@ -120,7 +120,7 @@ export class PitchComponent implements OnInit {
       "photo": "../../../assets/Victor.jpg",
       "number": 13,
       "position": "DEF",
-      "assists": 2
+      "assists": 2,
     },
     {
       "firstName": "Angel",

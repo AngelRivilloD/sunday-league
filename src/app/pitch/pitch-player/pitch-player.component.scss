@@ -108,13 +108,21 @@
             margin-left: 8px;
         }
 
+        &-captain {
+            width: 16px;
+            height: 16px;
+            margin-left: 42px;
+            font-size: 11px;
+            margin-top: -16px;
+        }
+
         &-mvp {
             position: absolute;
-            margin-left: -7px;
+            margin-left: -9px;
             margin-top: 17px;
-            width: 14px;
-            height: 14px;
-            font-size: 14px;
+            width: 16px;
+            height: 16px;
+            font-size: 18px;
             color: #ffc800;
         }
 
@@ -152,8 +160,8 @@
         }
 
         &-img {
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
         }
     }
 }
