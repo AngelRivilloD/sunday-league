@@ -4,7 +4,8 @@
             Feed mode
         </mat-slide-toggle>
     </div>
-    <img class="pitch-img" src="../../assets/pitchblack2.png" alt="">
+    <img class="pitch-img" *ngIf="!smallMode" src="../../assets/pitchblack2.png" alt="">
+    <img class="pitch-img" *ngIf="smallMode" src="../../assets/pitchblack3.png" alt="">
     <div class="lineup">
         <div class="lineup-row attacker">
             <pitch-player [player]="lineUp[10]" (click)="selectCaptain(lineUp[10])"></pitch-player>
@@ -32,7 +33,7 @@
     <div class="bench">
 
         <div class="bench-players" [ngClass]="{'full-width': highLightsMode}">
-            <h4>Cambios</h4>
+            <h4 *ngIf="!smallMode">Cambios</h4>
             <div class="bench-player" *ngFor="let player of bench">
                 <img class="bench-player-img" [src]="player.photo" alt="">
                 <div class="bench-player-text">
