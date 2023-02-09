@@ -192,8 +192,7 @@ export class PitchComponent implements OnInit {
   constructor(private _storageService: StorageService) { }
 
   ngOnInit(): void {
-    // this.highLightsMode = this._storageService.highlightsMode;
-    this.highLightsMode = true;
+    this.highLightsMode = this._storageService.highlightsMode;
     this.lineUp = (this._storageService.lineup.length > 0) ? this._storageService.lineup : this.lineUp;
     this.bench = (this._storageService.bench.length > 0) ? this._storageService.bench : this.bench;
   }

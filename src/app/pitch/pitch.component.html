@@ -4,6 +4,19 @@
     </mat-slide-toggle>
 </div>
 <div class="pitch-wrapper" [ngClass]="{'small-mode': smallMode}">
+    <!-- <div class="pitch-field">
+        <div class="container">
+            <div class="line"></div>
+            <div class="half"></div>
+            <div class="panelty left"></div>
+            <div class="panelty right"></div>
+            <div class="p-spot left">&nbsp;</div>
+            <div class="p-spot right">&nbsp;</div>
+            <div class="center"></div>
+            <div class="p-place left"></div>
+            <div class="p-place right"></div>
+        </div>
+    </div> -->
     <!-- <img class="pitch-img" *ngIf="!smallMode" src="../../assets/pitchblack2.png" alt="">
     <img class="pitch-img" *ngIf="smallMode" src="../../assets/pitchblack2.png" alt=""> -->
     <div class="lineup">
@@ -79,11 +92,9 @@
 
     <div class="side-bench" *ngIf="smallMode">
         <div class="side-bench-players" [ngClass]="{'full-width': highLightsMode}">
+            <p class="cambios">Cambios</p>
             <div class="side-bench-player" *ngFor="let player of bench">
-
                 <img class="side-bench-player-img" [src]="player.photo" alt="">
-
-
                 <div class="side-bench-player-red-card" *ngIf="player.redCard && highLightsMode"></div>
                 <div class="side-bench-player-assists" *ngIf="player.assists && highLightsMode">
                     <img src="../../../assets/assists2.jpg" alt="">
