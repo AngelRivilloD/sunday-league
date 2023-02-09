@@ -36,7 +36,8 @@ export class PitchComponent implements OnInit {
       "nickName": "",
       "photo": "../../../assets/Cabana.jpg",
       "number": 4,
-      "position": "DEF"
+      "position": "DEF",
+      "mvp": true
     },
     {
       "firstName": "Tonino",
