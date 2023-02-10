@@ -29,6 +29,11 @@ export class LineupComponent implements OnInit {
     this.lineUp = [];
   }
 
+  selectCaptain(player: Player) {
+    this.lineUp.forEach(player => player.captain = false);
+    player.captain = true;
+  }
+
   playerSelected(player: Player) {
     if (this.lineUp.length > 10) { return }
 
