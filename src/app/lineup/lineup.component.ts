@@ -38,7 +38,7 @@ export class LineupComponent implements OnInit {
 
   removeFromLineup(player: Player) {
     this.lineUp = this.lineUp.filter(item => { return item !== player });
-    this.bench.push(player);
+    this.bench = this.bench.concat(player);
   }
 
   removeFromBench(player: Player) {
