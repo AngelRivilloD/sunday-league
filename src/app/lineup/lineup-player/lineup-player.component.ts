@@ -15,6 +15,11 @@ export class LineupPlayerComponent {
   @Output() removePlayer = new EventEmitter<any>();
 
   select(player: Player) {
+    if (this.allowDelete) {
+      this.remove(player);
+      return;
+    }
+
     this.playerSelected.emit(player);
   }
 
