@@ -10,7 +10,9 @@
             <img src="../../../assets/football.png" alt="">
             <div class="player-goals-text" *ngIf="player.goals > 1">{{player.goals}}</div>
         </div>
-        <img class="player-change" *ngIf="player.changed" src="../../../assets/change.png" alt="">
+        <div class="player-change" *ngIf="player.changed">
+            <img src="../../../assets/change.png" alt="">
+        </div>
         <mat-icon class="player-mvp" *ngIf="player.mvp">star</mat-icon>
         <img class="player-img" [src]="player.photo" alt="">
 

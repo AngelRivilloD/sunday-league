@@ -118,7 +118,7 @@ export const playersData: Player[] = [
         "lastName": "Santoro",
         "nickName": "",
         "photo": "../../../assets/Santoro.jpg",
-        "number": 20,
+        "number": 30,
         "position": "MED"
     },
     {

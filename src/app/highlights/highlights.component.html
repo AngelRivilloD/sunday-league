@@ -17,7 +17,7 @@
     <mat-tab-group>
         <mat-tab label="Goles">
             <div class="players-list">
-                <div class="player" *ngFor="let player of allPlayers; let indexOfelement=index;">
+                <div class="player" *ngFor="let player of allPlayers">
                     <img class="player-photo" [src]="player.photo" alt="">
                     <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
                     <div class="player-amount">
@@ -39,6 +39,7 @@
         <mat-tab label="Asistencias">
             <div class="players-list">
                 <div class="player" *ngFor="let player of allPlayers">
+                    <img class="player-photo" [src]="player.photo" alt="">
                     <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
                     <div class="player-amount">
                         <span *ngIf="player.assists">{{player.assists}}</span>
@@ -57,6 +58,7 @@
         <mat-tab label="Rojas">
             <div class="players-list red-cards-list">
                 <div class="player" *ngFor="let player of allPlayers">
+                    <img class="player-photo" [src]="player.photo" alt="">
                     <div class="player-name">{{player.firstName}} {{player.lastName}}</div>
                     <div class="player-amount">
                         <span *ngIf="player.redCard">1</span>
