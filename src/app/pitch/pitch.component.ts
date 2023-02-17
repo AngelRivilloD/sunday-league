@@ -22,8 +22,8 @@ export class PitchComponent implements OnInit {
     this.bench = (this._storageService.bench.length > 0) ? this._storageService.bench : this.bench;
   }
 
-  selectCaptain(player: Player) {
-    this.lineUp.forEach(player => player.captain = false);
-    player.captain = true;
+  playerChanged(player: Player) {
+    player.changed = !player.changed;
+    console.log('changed');
   }
 }

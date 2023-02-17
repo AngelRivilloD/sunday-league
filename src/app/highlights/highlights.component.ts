@@ -51,4 +51,8 @@ export class HighlightsComponent implements OnInit {
   select(player: Player) {
     player.mvp = true;
   }
+
+  existMvp() {
+    return this.allPlayers.some(player => player.mvp);
+  }
 }

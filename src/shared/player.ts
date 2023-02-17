@@ -10,4 +10,5 @@ export interface Player {
     captain?: boolean;
     redCard?: boolean;
     mvp?: boolean;
+    changed?: boolean;
 }

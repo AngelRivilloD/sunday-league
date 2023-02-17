@@ -30,6 +30,7 @@
   </div>
 
   <div class="lineup-container">
+    <div class="lineup-container-title">Once y capitán</div>
     <div class="positions">
       <div class="position">POR</div>
       <div class="position">LD</div>
@@ -45,26 +46,23 @@
     </div>
 
     <div cdkDropList [cdkDropListData]="lineUp" class="lineup-list" (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of lineUp" cdkDrag>
+      <div class="example-box" *ngFor="let item of lineUp" (click)="selectCaptain(item)" cdkDrag>
         <img class="lineup-list-img" [src]="item.photo">
         <div class="lineup-list-name">{{item.nickName || item.lastName}}</div>
+        <div class="lineup-list-captain" *ngIf="item.captain">C</div>
         <mat-icon (click)="removeFromLineup(item)" fontIcon="close"></mat-icon>
       </div>
     </div>
-    <!-- <mat-form-field class="captain-select" appearance="outline">
-      <mat-label>Select captain</mat-label>
-      <mat-select [disabled]="lineUp.length < 11" (selectionChange)="selectCaptain($event.value)">
-        <mat-option [value]="player" *ngFor="let player of lineUp">{{player.firstName}}
-          {{player.lastName}}</mat-option>
-      </mat-select>
-    </mat-form-field> -->
-    <button class="done-button" color="primary" [disabled]="lineUp.length < 11" (click)="goToLineup()"
-      mat-raised-button>
-      <mat-icon fontIcon="people">people</mat-icon>
-      ALINEACION</button>
-    <button class="done-button" color="primary" [disabled]="lineUp.length < 11" (click)="goToHighlights()"
-      mat-raised-button>
-      <mat-icon fontIcon="poll">poll</mat-icon>
-      HIGHLIGHTS</button>
+    <div class="flex">
+      <button class="done-button" color="primary" [disabled]="lineUp.length < 11 || !captainExist(lineUp)"
+        (click)="goToLineup()" mat-raised-button>
+        <!-- <mat-icon fontIcon="people">people</mat-icon> -->
+        ONCE</button>
+      <button class="done-button" color="primary" [disabled]="lineUp.length < 11 || !captainExist(lineUp)"
+        (click)="goToHighlights()" mat-raised-button>
+        <!-- <mat-icon fontIcon="poll">poll</mat-icon> -->
+        RESUMEN</button>
+    </div>
+
   </div>
 </div>

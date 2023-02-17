@@ -30,6 +30,10 @@ export class LineupComponent implements OnInit {
   }
 
   selectCaptain(player: Player) {
+    if (player.captain) {
+      player.captain = false;
+      return;
+    }
     this.lineUp.forEach(player => player.captain = false);
     player.captain = true;
   }
@@ -64,6 +68,11 @@ export class LineupComponent implements OnInit {
   checkPosition(position: string) {
     const exist = this.bench.some(player => player.position === position);
     return exist;
+  }
+
+  captainExist(lineUp: Player[]) {
+    console.log(lineUp, lineUp.some(player => player.captain));
+    return lineUp.some(player => player.captain);
   }
 
   private _storePositions() {

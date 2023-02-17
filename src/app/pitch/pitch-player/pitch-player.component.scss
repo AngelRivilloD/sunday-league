@@ -3,19 +3,32 @@
     width: 80px;
     font-size: 13px;
 
+
+    &-change {
+        width: 16px;
+        position: absolute;
+        background-color: white;
+        border-radius: 12px;
+        margin-left: -12px;
+        margin-top: 10px;
+        box-shadow: 1px 1px 2px 1px #363636;
+    }
+
     &-red-card {
         background-color: #d32626;
         height: 14px;
         width: 10px;
         position: absolute;
         margin-left: 14px;
+        margin-top: -9px;
     }
 
     &-mvp {
         position: absolute;
-        margin-left: -14px;
-        margin-top: 20px;
+        margin-left: 8px;
+        margin-top: -20px;
         color: #ffc800;
+        font-size: 21px;
     }
 
     &-goals {
@@ -70,14 +83,16 @@
     }
 
     &-captain {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         background-color: #b50c0c;
         border-radius: 40px;
         font-weight: 800;
         color: white;
         margin-top: -18px;
         margin-left: 56px;
+        font-size: 12px;
+        line-height: 18px;
     }
 
     &-text {
@@ -104,26 +119,37 @@
     .player {
         width: 60px;
 
+        &-change {
+            width: 12px;
+            position: absolute;
+            background-color: white;
+            border-radius: 12px;
+            margin-left: -12px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 2px 1px #363636;
+        }
+
+
         &-red-card {
             margin-left: 8px;
         }
 
         &-captain {
-            width: 16px;
-            height: 16px;
+            width: 12px;
+            height: 12px;
             margin-left: 42px;
-            font-size: 11px;
-            margin-top: -16px;
+            font-size: 10px;
+            margin-top: -12px;
+            line-height: 18px;
+            line-height: 14px;
         }
 
         &-mvp {
             position: absolute;
-            margin-left: -9px;
-            margin-top: 17px;
-            width: 16px;
-            height: 16px;
-            font-size: 18px;
+            margin-left: 3px;
+            margin-top: -16px;
             color: #ffc800;
+            font-size: 16px;
         }
 
         &-assists {
