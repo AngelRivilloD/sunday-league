@@ -70,7 +70,7 @@ export const playersData: Player[] = [
         "lastName": "Hernández",
         "nickName": "Daniel",
         "photo": "../../../assets/Daniel.jpg",
-        "number": 79,
+        "number": 33,
         "position": "DEF"
     },
     {
@@ -182,7 +182,7 @@ export const playersData: Player[] = [
         "lastName": "Petruzzella",
         "nickName": "Petru",
         "photo": "../../../assets/Petru.jpg",
-        "number": 91,
+        "number": 10,
         "position": "DEL"
     },
     {
