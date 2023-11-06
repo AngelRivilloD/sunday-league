@@ -21,7 +21,12 @@ const routes: Routes = [
   {
     path: 'convocatoria',
     component: ConvocatoriaComponent
-  }
+  },
+  {
+    path: '**',
+    redirectTo: '/lineup',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

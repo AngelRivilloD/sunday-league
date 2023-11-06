@@ -25,14 +25,14 @@ export const playersData: Player[] = [
         "number": 4,
         "position": "DEF"
     },
-    {
+    /*{
         "firstName": "Tonino",
         "lastName": "Cogliano",
         "nickName": "Nino",
         "photo": "../../../assets/Nino.jpg",
         "number": 5,
         "position": "DEF"
-    },
+    },*/
     {
         "firstName": "Victor",
         "lastName": "Garban",
@@ -71,6 +71,14 @@ export const playersData: Player[] = [
         "nickName": "Daniel",
         "photo": "../../../assets/Daniel.jpg",
         "number": 79,
+        "position": "DEF"
+    },
+    {
+        "firstName": "Chino",
+        "lastName": "Chino",
+        "nickName": "Chino",
+        "photo": "../../../assets/camavinga.png",
+        "number": 21,
         "position": "DEF"
     },
     {
@@ -146,21 +154,29 @@ export const playersData: Player[] = [
         "position": "MED"
     },
     {
+        "firstName": "Luisda",
+        "lastName": "Sequeira",
+        "nickName": "Luisda",
+        "photo": "../../../assets/luisda.jpeg",
+        "number": 50,
+        "position": "MED"
+    },
+    {
         "firstName": "Ricardo",
         "lastName": "Cogliano",
-        "nickName": "Kkto",
+        "nickName": "Kkito",
         "photo": "../../../assets/KKto.jpg",
         "number": 17,
         "position": "DEL"
     },
-    {
+    /*{
         "firstName": "Samuel",
         "lastName": "Añez",
         "nickName": "Samu",
         "photo": "../../../assets/Samuel.jpg",
         "number": 18,
         "position": "DEL"
-    },
+    },*/
     {
         "firstName": "Alejandro",
         "lastName": "Petruzzella",
@@ -183,6 +199,22 @@ export const playersData: Player[] = [
         "nickName": "Elio",
         "photo": "../../../assets/Elio.jpg",
         "number": 9,
+        "position": "DEL"
+    },
+    {
+        "firstName": "Andres",
+        "lastName": "Sepulveda",
+        "nickName": "Sepu",
+        "photo": "../../../assets/sepu.jpeg",
+        "number": 32,
+        "position": "DEL"
+    },
+    {
+        "firstName": "Jose Daniel",
+        "lastName": "Salomon",
+        "nickName": "Jose",
+        "photo": "../../../assets/camavinga.png",
+        "number": 99,
         "position": "DEL"
     }
 ]

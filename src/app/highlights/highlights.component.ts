@@ -17,6 +17,13 @@ export class HighlightsComponent implements OnInit {
   constructor(private _storageService: StorageService) { }
 
   ngOnInit() {
+    if (localStorage.getItem('lineup') && localStorage.getItem('bench')) {
+      this.bench = JSON.parse(localStorage.getItem('bench') || '{}');
+      this.lineUp = JSON.parse(localStorage.getItem('lineup') || '{}');
+      this.allPlayers = this.lineUp.concat(this.bench);
+      return;
+    }
+
     this.lineUp = (this._storageService.lineup.length > 0) ? this._storageService.lineup : this.lineUp;
     this.bench = (this._storageService.bench.length > 0) ? this._storageService.bench : this.bench;
     this.allPlayers = this.lineUp.concat(this.bench);
@@ -42,7 +49,7 @@ export class HighlightsComponent implements OnInit {
     player.redCard = !player.redCard;
   }
 
-  print() {
+  save() {
     this._storageService.lineup = this.allPlayers.splice(0, 11);
     this._storageService.bench = this.allPlayers;
     this._storageService.highlightsMode = true;

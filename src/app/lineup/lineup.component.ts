@@ -21,6 +21,12 @@ export class LineupComponent implements OnInit {
     private _router: Router) { }
 
   ngOnInit(): void {
+    if (localStorage.getItem('lineup') && localStorage.getItem('bench')) {
+      this.bench = JSON.parse(localStorage.getItem('bench') || '{}');
+      this.lineUp = JSON.parse(localStorage.getItem('lineup') || '{}');
+      return;
+    }
+
     this.bench = JSON.parse(JSON.stringify(playersData));
   }
 
@@ -78,6 +84,8 @@ export class LineupComponent implements OnInit {
   private _storePositions() {
     this._storageService.lineup = this.lineUp;
     this._storageService.bench = this.bench;
+    localStorage.setItem('lineup', JSON.stringify(this.lineUp));
+    localStorage.setItem('bench', JSON.stringify(this.bench));
   }
 
   drop(event: CdkDragDrop<Player[]>) {
