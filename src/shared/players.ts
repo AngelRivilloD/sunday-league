@@ -25,6 +25,14 @@ export const playersData: Player[] = [
         "number": 4,
         "position": "DEF"
     },
+    {
+        "firstName": "Luis",
+        "lastName": "Cabanelas",
+        "nickName": "Cabanelas",
+        "photo": "../../../assets/tchouameni.png",
+        "number": 12,
+        "position": "DEF"
+    },
     /*{
         "firstName": "Tonino",
         "lastName": "Cogliano",
@@ -153,14 +161,14 @@ export const playersData: Player[] = [
         "number": 7,
         "position": "MED"
     },
-    {
-        "firstName": "Luisda",
-        "lastName": "Sequeira",
-        "nickName": "Luisda",
-        "photo": "../../../assets/luisda.jpeg",
-        "number": 50,
-        "position": "MED"
-    },
+    // {
+    //     "firstName": "Luisda",
+    //     "lastName": "Sequeira",
+    //     "nickName": "Luisda",
+    //     "photo": "../../../assets/luisda.jpeg",
+    //     "number": 50,
+    //     "position": "MED"
+    // },
     {
         "firstName": "Ricardo",
         "lastName": "Cogliano",
@@ -169,14 +177,14 @@ export const playersData: Player[] = [
         "number": 17,
         "position": "DEL"
     },
-    /*{
+    {
         "firstName": "Samuel",
         "lastName": "Añez",
         "nickName": "Samu",
         "photo": "../../../assets/Samuel.jpg",
         "number": 18,
         "position": "DEL"
-    },*/
+    },
     {
         "firstName": "Alejandro",
         "lastName": "Petruzzella",
@@ -201,20 +209,20 @@ export const playersData: Player[] = [
         "number": 9,
         "position": "DEL"
     },
-    {
-        "firstName": "Andres",
-        "lastName": "Sepulveda",
-        "nickName": "Sepu",
-        "photo": "../../../assets/sepu.jpeg",
-        "number": 32,
-        "position": "DEL"
-    },
-    {
-        "firstName": "Jose Daniel",
-        "lastName": "Salomon",
-        "nickName": "Jose",
-        "photo": "../../../assets/camavinga.png",
-        "number": 99,
-        "position": "DEL"
-    }
+    // {
+    //     "firstName": "Andres",
+    //     "lastName": "Sepulveda",
+    //     "nickName": "Sepu",
+    //     "photo": "../../../assets/sepu.jpeg",
+    //     "number": 32,
+    //     "position": "DEL"
+    // },
+    // {
+    //     "firstName": "Jose Daniel",
+    //     "lastName": "Salomon",
+    //     "nickName": "Jose",
+    //     "photo": "../../../assets/camavinga.png",
+    //     "number": 99,
+    //     "position": "DEL"
+    // }
 ]
