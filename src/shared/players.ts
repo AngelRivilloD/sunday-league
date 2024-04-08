@@ -28,7 +28,7 @@ export const playersData: Player[] = [
     {
         "firstName": "Luis",
         "lastName": "Cabanelas",
-        "nickName": "Cabanelas",
+        "nickName": "Caba",
         "photo": "../../../assets/tchouameni.png",
         "number": 12,
         "position": "DEF"
